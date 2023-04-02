@@ -1,0 +1,67 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+
+             x:Class="Recipe.Views.RecipePage">
+    <ScrollView HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
+        <StackLayout>
+
+            <!--Title and back button-->
+
+            <StackLayout Orientation="Horizontal" Padding="10">
+                <ImageButton
+          
+                    Source="global_backbutton.svg"
+                    HorizontalOptions="Start"
+                    BackgroundColor="Transparent"
+                    VerticalOptions="CenterAndExpand"
+                    HeightRequest="25"
+                    WidthRequest="25"
+                    Margin="10, 0, 0, 0"/>
+
+                <Label x:Name="Recipe_Name" Text=""  HorizontalOptions="CenterAndExpand" Padding="0, 0, 0, 0" VerticalOptions="CenterAndExpand" FontSize="30"/>
+            </StackLayout>
+
+
+            <!--<Frame BackgroundColor= "#e6ac8b" Padding="30" Margin="10" HeightRequest="300" HasShadow="True">
+                    <Grid>
+
+                        <xct:MediaElement Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/DidYouSubscribe%2FToMyChannelYet%2Fsample.mp4?alt=media"   AutoPlay="True" HorizontalOptions="Center"  />
+                    </Grid>
+            </Frame>-->
+            <Grid>
+                <Frame Background="#e6ac8b" WidthRequest="300" HeightRequest="180" Padding="10" Margin="20" CornerRadius="20"
+                        HasShadow="True" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="0" xct:ShadowEffect.Radius="10">
+                    <xct:MediaElement Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/DidYouSubscribe%2FToMyChannelYet%2Fsample.mp4?alt=media" WidthRequest="250"/>
+                </Frame>
+
+            </Grid>
+
+
+            <StackLayout Orientation="Vertical">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Margin="20, 0, 0, 0">
+                    <Label Text="Ingredients"  FontSize="25" TextColor="#000000"/>
+                </StackLayout>
+                <ScrollView Orientation="Horizontal" Margin="20, 0, 0, 0" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
+                    <StackLayout x:Name="IngredientsLayout" Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" HeightRequest="180">
+                        <!-- Ingredients will be dynamically added here -->
+                    </StackLayout>
+                </ScrollView>
+            </StackLayout>
+            <BoxView Color="#e6e6e6" HeightRequest="3" Margin="8, 0, 8, 0" HorizontalOptions="FillAndExpand" />
+
+
+            <StackLayout>
+                <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Margin="20, 10, 0, 0">
+                    <Label Text="Steps"  FontSize="25"/>
+                </StackLayout>
+                <StackLayout x:Name="StepsListStackLayout" />
+            </StackLayout>
+
+        </StackLayout>
+
+
+    </ScrollView>
+
+</ContentPage>
