@@ -16,12 +16,14 @@ namespace Recipe.Models.Ingredients
         {
             firebase = new FirebaseClient("https://realtimedatabasetest-f226a-default-rtdb.asia-southeast1.firebasedatabase.app/");
             ingredients = new List<Ingredient>(){
-            new Ingredient { Name = "Potato", Image = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tomato_je.jpg/1082px-Tomato_je.jpg" },
-            new Ingredient { Name = "Tomato", Image = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tomato_je.jpg/1082px-Tomato_je.jpg" },
-            new Ingredient { Name = "Garlic", Image = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tomato_je.jpg/1082px-Tomato_je.jpg" },
-            new Ingredient { Name = "Onion", Image = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/89/Tomato_je.jpg/1082px-Tomato_je.jpg" },
+             new Ingredient { Name = "Beef", Image = "https://upload.wikimedia.org/wikipedia/commons/6/64/Beef_cuts_%28english%29.svg" },
+            new Ingredient { Name = "Chicken", Image = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6d/Roast_chicken_with_lemon_and_herbs_%281%29.jpg/1024px-Roast_chicken_with_lemon_and_herbs_%281%29.jpg" },
+            new Ingredient { Name = "Pork", Image = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Blade_steak.jpg/1280px-Blade_steak.jpg" },
+            new Ingredient { Name = "Salmon", Image = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/4d/Atlantic_salmon_%28Salmo_salar%29.jpg/1024px-Atlantic_salmon_%28Salmo_salar%29.jpg" }
+
+
             };
-            /*AddIngredients();*/ // Since this method is called from a constructor, we use Wait() instead of await.
+           /* AddIngredients();*/ // Since this method is called from a constructor, we use Wait() instead of await.
         }
 
         public async Task AddIngredient(string name, string imageUrl)
@@ -54,6 +56,16 @@ namespace Recipe.Models.Ingredients
 
             return ingredients;
         }
+        public async Task<List<Ingredient>> GetAllIngredients()
+        {
+            var result = await firebase
+                .Child("Ingredients")
+                .OrderBy("Name")
+                .OnceAsync<Ingredient>();
+
+            return result.Select(i => i.Object).ToList();
+        }
+
 
     }
 }

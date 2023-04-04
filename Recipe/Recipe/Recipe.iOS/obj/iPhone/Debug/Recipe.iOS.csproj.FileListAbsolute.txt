@@ -1,5 +1,11 @@
 C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\Recipe.iOS.exe
 C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\Recipe.iOS.pdb
+C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\Firebase.dll
+C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\Firebase.Storage.dll
+C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\LiteDB.dll
+C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\Newtonsoft.Json.dll
+C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\System.Reactive.dll
+C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\Xamarin.CommunityToolkit.dll
 C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\Xamarin.Essentials.dll
 C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\Xamarin.Essentials.pdb
 C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\Xamarin.Forms.Core.dll
@@ -61,9 +67,3 @@ C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\obj\iPhone\Debug\Recipe.iOS
 C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\obj\iPhone\Debug\Recipe.iOS.csproj.CopyComplete
 C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\obj\iPhone\Debug\Recipe.iOS.exe
 C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\obj\iPhone\Debug\Recipe.iOS.pdb
-C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\Firebase.dll
-C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\Firebase.Storage.dll
-C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\LiteDB.dll
-C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\Newtonsoft.Json.dll
-C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\System.Reactive.dll
-C:\Users\msham\source\repos\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\Xamarin.CommunityToolkit.dll

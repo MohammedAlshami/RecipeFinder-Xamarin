@@ -16,16 +16,12 @@ namespace Recipe
     {
         public MainPage()
         {
-
             InitializeComponent();
 
-
         }
-        protected async override void OnAppearing()
+        protected override async void OnAppearing()
         {
-
             base.OnAppearing();
-
         }
 
     }

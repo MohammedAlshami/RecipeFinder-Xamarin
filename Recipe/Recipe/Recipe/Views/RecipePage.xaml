@@ -51,7 +51,6 @@
             </StackLayout>
             <BoxView Color="#e6e6e6" HeightRequest="3" Margin="8, 0, 8, 0" HorizontalOptions="FillAndExpand" />
 
-
             <StackLayout>
                 <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Margin="20, 10, 0, 0">
                     <Label Text="Steps"  FontSize="25"/>

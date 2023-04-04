@@ -5,9 +5,7 @@
              x:Class="Recipe.MainPage">
 
     <ContentPage.Content>
-        <!-- Add your UI elements here -->
         <StackLayout>
-            <Label Text="Hi!!!"/>
         </StackLayout>
     </ContentPage.Content>
 
