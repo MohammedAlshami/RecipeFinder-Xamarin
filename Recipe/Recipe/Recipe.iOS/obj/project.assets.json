@@ -1899,24 +1899,24 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\msham\\.nuget\\packages\\": {},
+    "C:\\Users\\Tazz\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\msham\\source\\repos\\Recipe\\Recipe\\Recipe.iOS\\Recipe.iOS.csproj",
+      "projectUniqueName": "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe.iOS\\Recipe.iOS.csproj",
       "projectName": "Recipe.iOS",
-      "projectPath": "C:\\Users\\msham\\source\\repos\\Recipe\\Recipe\\Recipe.iOS\\Recipe.iOS.csproj",
-      "packagesPath": "C:\\Users\\msham\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\msham\\source\\repos\\Recipe\\Recipe\\Recipe.iOS\\obj\\",
+      "projectPath": "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe.iOS\\Recipe.iOS.csproj",
+      "packagesPath": "C:\\Users\\Tazz\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe.iOS\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\msham\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Tazz\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -1930,8 +1930,8 @@
       "frameworks": {
         "xamarinios10": {
           "projectReferences": {
-            "C:\\Users\\msham\\source\\repos\\Recipe\\Recipe\\Recipe\\Recipe.csproj": {
-              "projectPath": "C:\\Users\\msham\\source\\repos\\Recipe\\Recipe\\Recipe\\Recipe.csproj"
+            "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe\\Recipe.csproj": {
+              "projectPath": "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe\\Recipe.csproj"
             }
           }
         }

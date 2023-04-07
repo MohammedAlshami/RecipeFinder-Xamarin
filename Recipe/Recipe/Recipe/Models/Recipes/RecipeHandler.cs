@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Firebase.Database;
 using Firebase.Database.Query;
 using Recipe.Models.Ingredients;
+using Xamarin.Essentials;
 
 namespace Recipe.Models.Recipes
 {
@@ -52,23 +53,32 @@ namespace Recipe.Models.Recipes
             var allRecipes = await GetAllRecipes();
             return allRecipes.Where(a => a.RecipeId == recipeId).FirstOrDefault();
         }
-        public async Task<List<Recipes>> GetRecipes(string searchString)
+
+
+        public async Task<List<Recipes>> GetRecipes(string searchQuery)
         {
-            var recipes = new List<Recipes>();
-
-            var result = await firebase
+            var recipes = await firebase
                 .Child("Recipe")
-                .OrderBy("Name")
                 .OnceAsync<Recipes>();
+            foreach (var recipe in recipes)
+            {
+                Console.WriteLine(recipe.name)
+            }
 
-            recipes.AddRange(result.Select(r => r.Object));
+            var matchingRecipes = new List<Recipes>();
+            foreach (var recipe in recipes.Select(r => r.Object))
+            {
+                if (recipe.Keywords != null && recipe.Keywords.Any(k => k.ToLower().Contains(searchQuery.ToLower())))
+                {
+                    matchingRecipes.Add(recipe);
+                }
+            }
 
-            var filteredRecipes = recipes.Where(r => r.Name.ToLower().Contains(searchString.ToLower())).ToList();
-
-            return filteredRecipes;
+            return matchingRecipes;
         }
 
 
-
     }
+
+
 }

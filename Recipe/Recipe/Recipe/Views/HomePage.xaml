@@ -44,6 +44,9 @@
 
                 </Frame>
                 </StackLayout>
+                <StackLayout  x:Name="searchStack">
+                    
+                </StackLayout>
 
 
                 <StackLayout x:Name="HomeSearchOption" Margin="25,10, 25, 0" IsVisible="false">
