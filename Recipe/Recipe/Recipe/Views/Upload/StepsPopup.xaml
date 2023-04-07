@@ -1,0 +1,31 @@
+﻿<xct:Popup 
+    
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
+
+             IsLightDismissEnabled="false"
+             x:Class="Recipe.Views.StepsPopup"
+             Size="350, 700"
+             Color="Transparent">
+
+
+    <Frame CornerRadius="20" HasShadow="True">
+        <StackLayout>
+            <Button Text="Close" TextColor="Red" Clicked="Button_Clicked"/>
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="Auto" />
+                </Grid.ColumnDefinitions>
+                <Entry x:Name="StepsEntry" Placeholder="Enter your steps here" Grid.Column="0" />
+                <Button Text="Add Step" Clicked="AddStepButton_Clicked" Grid.Column="1" />
+            </Grid>
+            <ScrollView>
+                <StackLayout x:Name="StepsListStackLayout" />
+            </ScrollView>
+        </StackLayout>
+    </Frame>
+
+
+</xct:Popup>

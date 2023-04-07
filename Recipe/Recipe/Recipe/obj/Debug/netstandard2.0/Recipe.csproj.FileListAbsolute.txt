@@ -5,7 +5,13 @@ C:\Users\msham\source\repos\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Recipe
 C:\Users\msham\source\repos\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Recipe.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\msham\source\repos\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\msham\source\repos\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
+C:\Users\msham\source\repos\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
 C:\Users\msham\source\repos\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\RecipePage.xaml.g.cs
+C:\Users\msham\source\repos\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\Search\IngredientsAddPage.xaml.g.cs
+C:\Users\msham\source\repos\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\Search\RecipeSearch.xaml.g.cs
+C:\Users\msham\source\repos\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\Upload\IngredientsPopup.xaml.g.cs
+C:\Users\msham\source\repos\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\Upload\StepsPopup.xaml.g.cs
+C:\Users\msham\source\repos\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\Upload\UploadPagexaml.xaml.g.cs
 C:\Users\msham\source\repos\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Recipe.AssemblyInfoInputs.cache
 C:\Users\msham\source\repos\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Recipe.AssemblyInfo.cs
 C:\Users\msham\source\repos\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Recipe.csproj.CoreCompileInputs.cache
@@ -14,4 +20,3 @@ C:\Users\msham\source\repos\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Recipe
 C:\Users\msham\source\repos\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\refint\Recipe.dll
 C:\Users\msham\source\repos\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Recipe.pdb
 C:\Users\msham\source\repos\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\ref\Recipe.dll
-C:\Users\msham\source\repos\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\IngredientsAddPage.xaml.g.cs

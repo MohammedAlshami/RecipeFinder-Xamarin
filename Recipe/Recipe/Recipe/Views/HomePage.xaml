@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Recipe.Views.HomePage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             BackgroundColor="white">
+    <ContentPage.Resources>
+        <x:Double x:Key="fontSize">17</x:Double>
+
+    </ContentPage.Resources>
+
+
+    <ScrollView>
+
+        <StackLayout>
+
+            <StackLayout>
+                <StackLayout Orientation="Horizontal">
+
+                    <ImageButton x:Name="SearchBackBtn" Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Icons%2Farrow_back_ios_FILL0_wght500_GRAD0_opsz48.png?alt=media" 
+                                 WidthRequest="30" BackgroundColor="Transparent"
+                                 Padding="0, 30, 0, 15" 
+                                 Margin="20, 0, 0, 0" 
+                                 IsVisible="false"
+                                 Clicked="backBtn"/>
+                    
+                    <Frame x:Name="homeSearchFrame" 
+                        CornerRadius="15" HasShadow="True" 
+                        Margin="25, 25, 25, 10"
+                        Padding="5, 15, 5, 15" 
+                        HeightRequest="20"    
+                        xct:ShadowEffect.Color="Black"
+                        xct:ShadowEffect.Radius="10">
+
+                        <SearchBar x:Name="HomeSearchBar"
+                        Placeholder="What are you craving" BackgroundColor="Transparent" 
+                        PlaceholderColor="Gray" 
+                        CancelButtonColor="Red"
+                        HeightRequest="20"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="Start"
+                        Focused="ChangeFrameHeight"
+                        TextChanged="SearchRecipes"/>
+
+                </Frame>
+                </StackLayout>
+
+
+                <StackLayout x:Name="HomeSearchOption" Margin="25,10, 25, 0" IsVisible="false">
+                    <Label Text="Cuisines" TextColor="Black" FontSize="22" Margin="0, 0, 0, 15"/>
+                    <StackLayout Orientation="Horizontal">
+                        <StackLayout Margin="0, 0, 0, 0">
+                            <Frame Padding="0" CornerRadius="15" HeightRequest="85" WidthRequest="110" HasShadow="True">
+                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fsearch%2Fmalay.webp?alt=media" Aspect="AspectFill"/>
+                            </Frame>
+                            <Label Text="Thai" TextColor="Black" FontSize="19" HorizontalOptions="CenterAndExpand"/>
+
+                        </StackLayout>
+                        <StackLayout Margin="10, 0, 0, 0">
+                            <Frame Padding="0" CornerRadius="15" HeightRequest="85" WidthRequest="110" HasShadow="True">
+                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fsearch%2Fmalay.webp?alt=media" Aspect="AspectFill"/>
+                            </Frame>
+                            <Label Text="Malay" TextColor="Black" FontSize="19" HorizontalOptions="CenterAndExpand"/>
+
+                        </StackLayout>
+                        <StackLayout Margin="10, 0, 0, 0">
+                            <Frame Padding="0" CornerRadius="15" HeightRequest="85" WidthRequest="110" HasShadow="True">
+                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fsearch%2Fmiddle.webp?alt=media" Aspect="AspectFill"/>
+                            </Frame>
+                            <Label Text="Middle East" TextColor="Black" FontSize="19" HorizontalOptions="CenterAndExpand"/>
+
+                        </StackLayout>
+
+
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="0, 20, 0, 0">
+                        <StackLayout Margin="0, 0, 0, 0">
+                            <Frame Padding="0" CornerRadius="15" HeightRequest="85" WidthRequest="110" HasShadow="True">
+                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fsearch%2Fwestern.jpg?alt=media" Aspect="AspectFill"/>
+                            </Frame>
+                            <Label Text="Western" TextColor="Black" FontSize="19" HorizontalOptions="CenterAndExpand"/>
+
+                        </StackLayout>
+                        <StackLayout Margin="10, 0, 0, 0">
+                            <Frame Padding="0" CornerRadius="15" HeightRequest="85" WidthRequest="110" HasShadow="True">
+                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fsearch%2Fchinese.jpg?alt=media" Aspect="AspectFill"/>
+                            </Frame>
+                            <Label Text="Chinese" TextColor="Black" FontSize="19" HorizontalOptions="CenterAndExpand"/>
+
+                        </StackLayout>
+                        <StackLayout Margin="10, 0, 0, 0">
+                            <Frame Padding="0" CornerRadius="15" HeightRequest="85" WidthRequest="110" HasShadow="True">
+                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fsearch%2FKorean.jpg?alt=media" Aspect="AspectFill"/>
+                            </Frame>
+                            <Label Text="Korean" TextColor="Black" FontSize="19" HorizontalOptions="CenterAndExpand"/>
+
+                        </StackLayout>
+
+
+                    </StackLayout>
+
+                </StackLayout>
+
+
+
+            </StackLayout>
+
+
+
+            <StackLayout x:Name="HomeComponents">
+
+
+            <StackLayout Margin="25, 5, 25, 0">
+                <Label Text="Shorts" TextColor="Black" FontSize="28" Margin="0, 0, 0, 15"/>
+                <Frame  BackgroundColor="#E6AC8B"
+                    HeightRequest="250" 
+                    CornerRadius="15" 
+                    HasShadow="True"
+                    xct:ShadowEffect.Color="Black"
+                    xct:ShadowEffect.Radius="10">
+
+                </Frame>
+            </StackLayout>
+
+                <StackLayout Margin="25">
+            <Label Text="Top Recipe" TextColor="Black" FontSize="28" Margin="0, 0, 0, 15"/>
+            <StackLayout Orientation="Horizontal">
+                <StackLayout>
+                    <Frame Padding="0" CornerRadius="15" HeightRequest="100" HasShadow="True">
+                        <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_salta.png?alt=media" Aspect="AspectFill"/>
+                    </Frame>
+                    <Label Text="Salta by" TextColor="Black" FontSize="18" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="@Ramzy" TextColor="#4287B0" FontSize="18" Margin="-10" HorizontalOptions="CenterAndExpand"/>
+
+                </StackLayout>
+                <StackLayout Margin="10, 0, 0, 0">
+                    <Frame Padding="0" CornerRadius="15" HeightRequest="100" HasShadow="True">
+                        <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_meetloaf.png?alt=media" Aspect="AspectFill"/>
+                    </Frame>
+                    <Label Text="Meatloaf by" TextColor="Black" FontSize="18" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="@Shaima" TextColor="#4287B0" FontSize="18" Margin="-10" HorizontalOptions="CenterAndExpand"/>
+
+                </StackLayout>
+                <StackLayout Margin="10, 0, 0, 0">
+                    <Frame Padding="0" CornerRadius="15" HeightRequest="100" HasShadow="True">
+                        <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_lasagna.png?alt=media" Aspect="AspectFill"/>
+                    </Frame>
+                    <Label Text="Lasagna by" TextColor="Black" FontSize="18" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="@Daniel" TextColor="#4287B0" FontSize="18" Margin="-10" HorizontalOptions="CenterAndExpand"/>
+
+                </StackLayout>
+            </StackLayout>
+        </StackLayout>
+
+        <StackLayout Margin="25, 0, 0, 0">
+            <Label Text="Specials" TextColor="Black" FontSize="28" Margin="0, 0, 0, 15"/>
+            <Frame BackgroundColor="#CFEFCF" Margin="0, 0, 25, 0" Padding="10, 0, 10, 0" CornerRadius="15">
+                <StackLayout>
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Margin="0, 5, 0, 10">
+                        <Image Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_mosque.png?alt=media" WidthRequest="50" VerticalOptions="CenterAndExpand"/>
+                        <Label Text="Hari Raya" TextColor="Black" FontSize="28" VerticalOptions="CenterAndExpand"/>
+                        <Image Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_raya.png?alt=media" WidthRequest="50" VerticalOptions="CenterAndExpand"/>
+                    </StackLayout>
+
+
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0, 0, 0, 20">
+                        <StackLayout Margin="0, 0, 0, 0">
+                            <Frame Padding="0" CornerRadius="15" HeightRequest="110" WidthRequest="110" HasShadow="True">
+                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_nasi_goreng.jpg?alt=media" Aspect="AspectFill"/>
+                            </Frame>
+                            <Label Text="Nasi Goreng" TextColor="Black" FontSize="18" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                        <StackLayout Margin="50, 0, 0, 0">
+                            <Frame Padding="0" CornerRadius="15" HeightRequest="110" WidthRequest="110" HasShadow="True">
+                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_apam.jpg?alt=media" Aspect="AspectFill"/>
+                            </Frame>
+                            <Label Text="Apam Balik" TextColor="Black" FontSize="18" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                      
+                    </StackLayout>
+                    
+                    
+                </StackLayout>
+
+            </Frame>
+
+
+        </StackLayout>
+
+
+
+    </StackLayout>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Recipe.Views.IngredientsAddPage">
+    <ContentPage.Content>
+        <!-- Add your UI elements here -->
+
+        <StackLayout>
+            <SearchBar x:Name="SearchBar" Placeholder="Search ingredients" />
+            <ScrollView>
+                <StackLayout x:Name="IngredientsStackLayout" Orientation="Vertical" Padding="10">
+                    <!-- Dynamic ingredients will be added here -->
+                </StackLayout>
+            </ScrollView>
+                <Frame
+                    VerticalOptions="End"
+                    BackgroundColor="White"
+                    HasShadow="True"
+                    CornerRadius="28"
+                    Margin="0, 0, 20, 20"
+                    Padding="10"
+                    HeightRequest="60"
+                    WidthRequest="60"
+                    HorizontalOptions="End">
+                    <ImageButton
+                        Source="global_backbutton.png"
+                        BackgroundColor="Transparent"
+                        HeightRequest="56"
+                        WidthRequest="56"
+                        CornerRadius="28"
+                        Clicked="OnAddIngredientButtonClicked"/>
+                </Frame>
+        </StackLayout>
+    </ContentPage.Content>
+
+</ContentPage>

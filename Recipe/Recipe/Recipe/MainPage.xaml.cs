@@ -1,14 +1,18 @@
-﻿using Recipe.Models.Ingredients;
+﻿using Firebase.Storage;
+using Recipe.Models.Ingredients;
 using Recipe.Models.Recipes;
+using Recipe.Views;
+using Recipe.Views.Upload;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Xml.Linq;
+using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.Forms;
-
 
 namespace Recipe
 {
@@ -17,12 +21,14 @@ namespace Recipe
         public MainPage()
         {
             InitializeComponent();
-
         }
-        protected override async void OnAppearing()
+
+        private async void btnClicked(object sender, EventArgs e)
         {
-            base.OnAppearing();
-        }
+            // Handle button click event here
+            await Navigation.PushAsync(new RecipeSearch());
 
+        }
     }
 }
+

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Firebase.Database;
 using Firebase.Database.Query;
+using Recipe.Models.Ingredients;
 
 namespace Recipe.Models.Recipes
 {
@@ -28,9 +29,9 @@ namespace Recipe.Models.Recipes
               }).ToList();
         }
 
-        public async Task AddRecipe(/*Recipe recipe*/)
+        public async Task AddRecipe(Recipes recipe)
         {
-            var recipe = new Recipes
+    /*        var recipe = new Recipes
             {
                 RecipeId = 1,
                 Name = "Spaghetti",
@@ -39,7 +40,7 @@ namespace Recipe.Models.Recipes
                 Video = "https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/DidYouSubscribe%2FToMyChannelYet%2F250f4cea-f328-4945-8ebe-94a77c2ec35b.mp4?alt=media&token=610a6422-db62-4b70-85e6-8e9af5ba373e",
                 Steps = new List<string> { "Step 1", "Step 2", "Step 3" },
                 Description = "A classic Italian dish."
-            };
+            };*/
 
             await firebase
               .Child("Recipe")
@@ -50,6 +51,21 @@ namespace Recipe.Models.Recipes
         {
             var allRecipes = await GetAllRecipes();
             return allRecipes.Where(a => a.RecipeId == recipeId).FirstOrDefault();
+        }
+        public async Task<List<Recipes>> GetRecipes(string searchString)
+        {
+            var recipes = new List<Recipes>();
+
+            var result = await firebase
+                .Child("Recipe")
+                .OrderBy("Name")
+                .OnceAsync<Recipes>();
+
+            recipes.AddRange(result.Select(r => r.Object));
+
+            var filteredRecipes = recipes.Where(r => r.Name.ToLower().Contains(searchString.ToLower())).ToList();
+
+            return filteredRecipes;
         }
 
 

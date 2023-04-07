@@ -1,0 +1,36 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Recipe.Views.Upload.UploadPagexaml">
+    <StackLayout>
+        <StackLayout>
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Start">
+                <Label Margin="0,0,0,10" Text="Firebase Realtime Database" FontAttributes="Bold" FontSize="Large" TextColor="Gray" HorizontalTextAlignment="Center" ></Label>
+                <Entry x:Name="txtId" Placeholder="ID"></Entry>
+                <Entry x:Name="txtName" Placeholder="Enter Recipe Name"></Entry>
+                <Button Text="Click To Add Ingredients" Clicked="GetIngredient"/>
+
+                <Button Text="Click To Add Steps" Clicked="GetSteps"/>
+                <Entry x:Name="txtDescription" Placeholder="Enter Description"></Entry>
+                <StackLayout>
+                    <Button Text="Upload" Clicked="Upload_Image" />
+                    <ProgressBar x:Name="progressBar" />
+                    <Label x:Name="downloadLink" />
+                </StackLayout>
+
+                <StackLayout>
+                    <Button Text="Upload" Clicked="Upload_Video" />
+                    <ProgressBar x:Name="videoprogressBar" />
+                    <Label x:Name="videoLink" />
+                </StackLayout>
+
+                <StackLayout  HorizontalOptions="CenterAndExpand" Orientation="Horizontal">
+                    <Button x:Name="btnAdd" WidthRequest="200" Text="Add" Clicked="BtnAdd_Clicked"/>
+                </StackLayout>
+
+
+            </StackLayout>
+        </StackLayout>
+    </StackLayout>
+
+</ContentPage>

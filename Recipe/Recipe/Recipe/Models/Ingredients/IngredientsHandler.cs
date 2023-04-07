@@ -23,7 +23,7 @@ namespace Recipe.Models.Ingredients
 
 
             };
-           /* AddIngredients();*/ // Since this method is called from a constructor, we use Wait() instead of await.
+           /* AddIngredients();*/  // Since this method is called from a constructor, we use Wait() instead of await.
         }
 
         public async Task AddIngredient(string name, string imageUrl)
