@@ -11,7 +11,8 @@ namespace Recipe
         {
             InitializeComponent();
 
-            MainPage = new HomePage();
+            MainPage = new NavigationPage(new HomePage());//Very important add this..
+
         }
 
         protected override void OnStart()

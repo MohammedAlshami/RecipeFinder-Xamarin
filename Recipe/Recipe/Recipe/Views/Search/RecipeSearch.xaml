@@ -5,7 +5,7 @@
 
     <ContentPage.Content>
         <StackLayout>
-            <SearchBar x:Name="SearchBar" Placeholder="Search recipes" SearchButtonPressed="OnSearchButtonPressed" />
+
             <ScrollView>
                 <StackLayout x:Name="RecipeList" />
             </ScrollView>

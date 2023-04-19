@@ -3869,11 +3869,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe.Android\\Recipe.Android.csproj",
+      "projectUniqueName": "C:\\Users\\Tazz\\Source\\Repos\\Recipe_Finder\\Recipe\\Recipe\\Recipe.Android\\Recipe.Android.csproj",
       "projectName": "Recipe.Android",
-      "projectPath": "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe.Android\\Recipe.Android.csproj",
+      "projectPath": "C:\\Users\\Tazz\\Source\\Repos\\Recipe_Finder\\Recipe\\Recipe\\Recipe.Android\\Recipe.Android.csproj",
       "packagesPath": "C:\\Users\\Tazz\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe.Android\\obj\\",
+      "outputPath": "C:\\Users\\Tazz\\Source\\Repos\\Recipe_Finder\\Recipe\\Recipe\\Recipe.Android\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "fallbackFolders": [
@@ -3894,8 +3894,8 @@
       "frameworks": {
         "monoandroid13.0": {
           "projectReferences": {
-            "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe\\Recipe.csproj": {
-              "projectPath": "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe\\Recipe.csproj"
+            "C:\\Users\\Tazz\\Source\\Repos\\Recipe_Finder\\Recipe\\Recipe\\Recipe\\Recipe.csproj": {
+              "projectPath": "C:\\Users\\Tazz\\Source\\Repos\\Recipe_Finder\\Recipe\\Recipe\\Recipe\\Recipe.csproj"
             }
           }
         }
@@ -3907,6 +3907,14 @@
           "Xamarin.Essentials": {
             "target": "Package",
             "version": "[1.7.0, )"
+          },
+          "Xamarin.Essentials": {
+            "target": "Package",
+            "version": "[1.7.0, )"
+          },
+          "Xamarin.Forms": {
+            "target": "Package",
+            "version": "[5.0.0.2196, )"
           },
           "Xamarin.Forms": {
             "target": "Package",

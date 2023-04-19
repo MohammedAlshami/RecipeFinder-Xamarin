@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe.iOS\\Recipe.iOS.csproj": {}
+    "C:\\Users\\Tazz\\Source\\Repos\\Recipe_Finder\\Recipe\\Recipe\\Recipe.iOS\\Recipe.iOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe.iOS\\Recipe.iOS.csproj": {
+    "C:\\Users\\Tazz\\Source\\Repos\\Recipe_Finder\\Recipe\\Recipe\\Recipe.iOS\\Recipe.iOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe.iOS\\Recipe.iOS.csproj",
+        "projectUniqueName": "C:\\Users\\Tazz\\Source\\Repos\\Recipe_Finder\\Recipe\\Recipe\\Recipe.iOS\\Recipe.iOS.csproj",
         "projectName": "Recipe.iOS",
-        "projectPath": "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe.iOS\\Recipe.iOS.csproj",
+        "projectPath": "C:\\Users\\Tazz\\Source\\Repos\\Recipe_Finder\\Recipe\\Recipe\\Recipe.iOS\\Recipe.iOS.csproj",
         "packagesPath": "C:\\Users\\Tazz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe.iOS\\obj\\",
+        "outputPath": "C:\\Users\\Tazz\\Source\\Repos\\Recipe_Finder\\Recipe\\Recipe\\Recipe.iOS\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "fallbackFolders": [
@@ -32,8 +32,8 @@
         "frameworks": {
           "xamarinios10": {
             "projectReferences": {
-              "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe\\Recipe.csproj": {
-                "projectPath": "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe\\Recipe.csproj"
+              "C:\\Users\\Tazz\\Source\\Repos\\Recipe_Finder\\Recipe\\Recipe\\Recipe\\Recipe.csproj": {
+                "projectPath": "C:\\Users\\Tazz\\Source\\Repos\\Recipe_Finder\\Recipe\\Recipe\\Recipe\\Recipe.csproj"
               }
             }
           }
@@ -65,14 +65,14 @@
         }
       }
     },
-    "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe\\Recipe.csproj": {
+    "C:\\Users\\Tazz\\Source\\Repos\\Recipe_Finder\\Recipe\\Recipe\\Recipe\\Recipe.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe\\Recipe.csproj",
+        "projectUniqueName": "C:\\Users\\Tazz\\Source\\Repos\\Recipe_Finder\\Recipe\\Recipe\\Recipe\\Recipe.csproj",
         "projectName": "Recipe",
-        "projectPath": "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe\\Recipe.csproj",
+        "projectPath": "C:\\Users\\Tazz\\Source\\Repos\\Recipe_Finder\\Recipe\\Recipe\\Recipe\\Recipe.csproj",
         "packagesPath": "C:\\Users\\Tazz\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Tazz\\source\\repos\\RecipeFinder-Xamarin\\Recipe\\Recipe\\Recipe\\obj\\",
+        "outputPath": "C:\\Users\\Tazz\\Source\\Repos\\Recipe_Finder\\Recipe\\Recipe\\Recipe\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

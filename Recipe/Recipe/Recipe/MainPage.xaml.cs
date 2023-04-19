@@ -23,12 +23,7 @@ namespace Recipe
             InitializeComponent();
         }
 
-        private async void btnClicked(object sender, EventArgs e)
-        {
-            // Handle button click event here
-            await Navigation.PushAsync(new RecipeSearch());
-
-        }
+   
     }
 }
 

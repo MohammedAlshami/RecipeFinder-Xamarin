@@ -60,9 +60,10 @@ namespace Recipe.Models.Recipes
             var recipes = await firebase
                 .Child("Recipe")
                 .OnceAsync<Recipes>();
+
             foreach (var recipe in recipes)
             {
-                Console.WriteLine(recipe.name)
+                Console.WriteLine(recipe.Object.Name);
             }
 
             var matchingRecipes = new List<Recipes>();

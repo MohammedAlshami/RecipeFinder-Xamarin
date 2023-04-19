@@ -9,7 +9,6 @@
             Text="Welcome to Xamarin Forms!"
                VerticalOptions="Center"
                HorizontalOptions="Center" />
-        <Button Text="Click Me" Clicked="btnClicked"/>
     </StackLayout>
 
 </ContentPage>

@@ -25,11 +25,11 @@ androidgeneratejnimarshalmethods=false
 os=windows_nt
 androidincludedebugsymbols=true
 androidpackagenamingpolicy=lowercasecrc64
-_nugetassetstimestamp=638174354481731020
+_nugetassetstimestamp=638175194531773242
 typemapkind=strings-asm
 androidsupportedabis=arm64-v8a
 armeabi-v7a
 x86
 x86_64
 androidmanifestplaceholders=
-projectfullpath=c:\users\tazz\source\repos\recipefinder-xamarin\recipe\recipe\recipe.android\recipe.android.csproj
+projectfullpath=c:\users\tazz\source\repos\recipe_finder\recipe\recipe\recipe.android\recipe.android.csproj

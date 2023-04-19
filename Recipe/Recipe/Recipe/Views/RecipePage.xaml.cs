@@ -17,15 +17,18 @@ namespace Recipe.Views
         readonly RecipeHandler recipeHandler = new RecipeHandler();
         readonly IngredientsHandler ingredients = new IngredientsHandler();
         Recipes recipe;
-        public RecipePage()
+
+        public RecipePage(Recipes r)
         {
             InitializeComponent();
+            recipeHandler = new RecipeHandler();
+            this.recipe = r;    
+
         }
-        protected async override void OnAppearing()
+        protected override void OnAppearing()
         {
 
             base.OnAppearing();
-            recipe = await recipeHandler.GetRecipe(1);
             Find_Recipe(null, null);
 
         }
@@ -54,6 +57,8 @@ namespace Recipe.Views
             }
 
         }
+
+
         private void DisplayStepsList(List<string> stepsList)
         {
             StepsListStackLayout.Children.Clear();
