@@ -1,0 +1,208 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Recipe.Views.Profile.ProfilePage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label
+             Text="Profile"
+             FontAttributes="Bold"
+             TextColor="Black"
+             FontSize="23"  
+             Margin="10, 0, 0, 20"
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"
+                />
+
+            <StackLayout>
+                <Frame CornerRadius="100" HeightRequest="150" WidthRequest="150" Padding="0"  HorizontalOptions="Center" VerticalOptions="Center" HasShadow="True" BackgroundColor="LightGray" Opacity=".4">
+                    <Grid>
+                        <Image x:Name="profile_picture"  Source="" Aspect="AspectFill" />
+                        <Image Source="nav_profile" HeightRequest="50" WidthRequest="50" VerticalOptions="Center" HorizontalOptions="Center" />
+                    </Grid>
+                </Frame>
+
+                <Label
+             x:Name="FullName"
+             Text="Gordan Ramsay"
+             FontAttributes="Bold"
+             TextColor="Black"
+             FontSize="19"  
+             Margin="0, 0, 0, 0"
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"
+                />
+                <Label
+             x:Name="userName"
+             Text="@Ramzy"
+             FontAttributes="Bold"
+             TextColor="gray"
+             FontSize="17"  
+             Margin="0, -5, 0, 0"
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"
+                />
+
+            </StackLayout>
+            <BoxView Color="#e6e6e5" HeightRequest="2" Margin="20, 10, 20, 0" HorizontalOptions="FillAndExpand" />
+            
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <StackLayout Margin="0, 7, 0, 0">
+                    <Label
+             x:Name="followers"
+             Text="1.2m"
+             FontAttributes="Bold"
+             TextColor="black"
+             FontSize="15"  
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"
+                />
+                    <Label
+             Text="Followers"
+             TextColor="Gray"
+             FontSize="13"  
+             Margin="5, 0, 0, 10"
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"
+                />
+                </StackLayout>
+                <StackLayout Margin="25, 7, 0, 0">
+                    <Label
+             x:Name="following"
+             Text="400"
+             FontAttributes="Bold"
+             TextColor="black"
+             FontSize="15"  
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"
+                />
+                    <Label
+             Text="Following"
+             TextColor="Gray"
+             FontSize="13"  
+             Margin="5, 0, 0, 10"
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"
+                />
+                </StackLayout>
+                <StackLayout Margin="25, 7, 0, 0">
+                    <Label
+             x:Name="posts"
+             Text="100"
+             FontAttributes="Bold"
+             TextColor="black"
+             FontSize="15"  
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"
+                />
+                    <Label
+             Text="Posts"
+             TextColor="Gray"
+             FontSize="13"  
+             Margin="5, 0, 0, 10"
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"
+                />
+                </StackLayout>
+                <StackLayout Margin="25, 7, 0, 0">
+                    <Label
+             x:Name="recipes"
+             Text="33"
+             FontAttributes="Bold"
+             TextColor="black"
+             FontSize="15"  
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"
+                />
+                    <Label
+             Text="Recipes"
+             TextColor="Gray"
+             FontSize="13"  
+             Margin="5, 0, 0, 10"
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"
+                />
+                </StackLayout>
+
+
+            </StackLayout>
+            <BoxView Color="#e6e6e5" HeightRequest="2" Margin="20, 0, 20, 15" HorizontalOptions="FillAndExpand" />
+            <StackLayout Margin="25, 0, 20, 0">
+                <StackLayout Orientation="Horizontal" Margin="0, 10, 0 ,20">
+                    <Frame Padding="2" CornerRadius="10" BackgroundColor="#f2f2f2">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="ProfileFrame_Tapped"/>
+                        </Frame.GestureRecognizers>
+                        <Image Source="profile_setting"  WidthRequest="40"/>
+                    </Frame>
+                    <Label
+            Text="Settings"
+            FontAttributes="Bold"
+            TextColor="Black"
+            FontSize="18"
+            Margin="15, 0, 0, 0"
+            VerticalOptions="Center"/>
+                    <BoxView HorizontalOptions="FillAndExpand"/>
+                    <Image Source="profile_arrow" HeightRequest="30"/>
+                    
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="0, 10, 0 ,20">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="UserManagementFrame_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                    <Frame Padding="2" CornerRadius="10" BackgroundColor="#f2f2f2">
+                        <Image Source="profile_profile"  WidthRequest="40"/>
+                    </Frame>
+                    <Label
+            Text="User Management"
+            FontAttributes="Bold"
+            TextColor="Black"
+            FontSize="18"
+            Margin="15, 0, 0, 0"
+            VerticalOptions="Center"/>
+                    <BoxView HorizontalOptions="FillAndExpand"/>
+                    <Image Source="profile_arrow" HeightRequest="30"/>
+                </StackLayout>
+                <StackLayout Orientation="Horizontal" Margin="0, 10, 0 ,20">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="UploadFrame_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                    <Frame Padding="2" CornerRadius="10" BackgroundColor="#f2f2f2">
+                        <Image Source="profile_upload" WidthRequest="40" Rotation="180"/>
+                    </Frame>
+                    <Label
+            Text="Upload"
+            FontAttributes="Bold"
+            TextColor="Black"
+            FontSize="18"
+            Margin="15, 0, 0, 0"
+            VerticalOptions="Center"/>
+                    <BoxView HorizontalOptions="FillAndExpand"/>
+                    <Image Source="profile_arrow" HeightRequest="30"/>
+                </StackLayout>
+                <BoxView Color="#e6e6e5" HeightRequest="2" Margin="0, 0, 0, 20" HorizontalOptions="FillAndExpand" />
+
+                <StackLayout Orientation="Horizontal" Margin="0, 10, 0 ,10">
+                    <StackLayout.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="LogoutFrame_Tapped"/>
+                    </StackLayout.GestureRecognizers>
+                    <Frame Padding="2" CornerRadius="10" BackgroundColor="#f2f2f2">
+                        <Image Source="profile_logout"  WidthRequest="40"/>
+                    </Frame>
+                    <Label
+            Text="Log out"
+            FontAttributes="Bold"
+            TextColor="Black"
+            FontSize="18"
+            Margin="15, 0, 0, 0"
+            VerticalOptions="Center"/>
+                    <BoxView HorizontalOptions="FillAndExpand"/>
+                    <Image Source="profile_arrow" HeightRequest="30"/>
+                </StackLayout>
+            </StackLayout>
+
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

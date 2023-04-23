@@ -2018,3 +2018,12 @@ C:\Users\Tazz\Source\Repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\
 C:\Users\Tazz\Source\Repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 C:\Users\Tazz\Source\Repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Tazz\Source\Repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\nav_profile.png
+C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\nav_camera.png
+C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\nav_home.png
+C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\nav_search.png
+C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\profile_upload.png
+C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\profile_logout.png
+C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\profile_profile.png
+C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\profile_setting.png
+C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\profile_arrow.png

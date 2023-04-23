@@ -1,0 +1,21 @@
+﻿<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:Recipe.Views"
+       xmlns:views1="clr-namespace:Recipe.Views.Upload"
+       xmlns:views2="clr-namespace:Recipe.Views.Profile"
+       xmlns:views3="clr-namespace:Recipe.Views.Camera"
+       x:Class="Recipe.Views.Navigation.BottomNavigation"
+       Shell.NavBarIsVisible="False">
+    <TabBar>
+        <ShellContent Title="Home"
+                     Icon="nav_home"
+                     ContentTemplate="{DataTemplate views:HomePage}" />
+        <ShellContent Title="Camera"
+                     Icon="nav_camera"
+                     ContentTemplate="{DataTemplate views3:CameraPage}" />
+        <ShellContent Title="Profile"
+                     Icon="nav_profile"
+                     ContentTemplate="{DataTemplate views2:ProfilePage}" />
+
+    </TabBar>
+</Shell>
