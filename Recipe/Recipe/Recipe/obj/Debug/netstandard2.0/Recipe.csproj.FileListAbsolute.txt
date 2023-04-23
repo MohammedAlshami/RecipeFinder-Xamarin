@@ -45,3 +45,4 @@ C:\Users\Tazz\Source\Repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstand
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\Navigation\BottomNavigation.xaml.g.cs
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\Camera\CameraPage.xaml.g.cs
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\Profile\ProfilePage.xaml.g.cs
+C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\Authentication\Registration.xaml.g.cs

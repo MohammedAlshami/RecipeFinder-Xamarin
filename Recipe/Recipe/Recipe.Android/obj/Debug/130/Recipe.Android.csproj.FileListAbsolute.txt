@@ -2027,3 +2027,6 @@ C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\profile_profile.png
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\profile_setting.png
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\profile_arrow.png
+C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\login_email.png
+C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\login_lock.png
+C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\login_arrow.png

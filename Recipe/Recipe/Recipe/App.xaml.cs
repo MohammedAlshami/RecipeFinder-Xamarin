@@ -1,5 +1,7 @@
 ﻿using Recipe.Views;
 using Recipe.Views.Navigation;
+using Recipe.Views.Authentication;
+
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -12,7 +14,7 @@ namespace Recipe
         {
             InitializeComponent();
 
-            MainPage = new BottomNavigation();//Very important add this..
+            MainPage = new Registration();//Very important add this..
 
         }
 
