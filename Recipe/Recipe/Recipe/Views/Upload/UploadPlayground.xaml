@@ -1,0 +1,70 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Recipe.Views.Upload.UploadPlayground">
+    <ContentPage.Content>
+        <Frame BackgroundColor="White" CornerRadius="15" Padding="0" HeightRequest="250">
+            <StackLayout>
+                <SearchBar x:Name="SearchBar" Placeholder="Search ingredients" />
+                <ScrollView>
+                    <StackLayout x:Name="IngredientsStack" Orientation="Vertical" Padding="10" Margin="10, 0, 10, 0" HorizontalOptions="CenterAndExpand">
+                        <!-- Dynamic ingredients will be added here -->
+                        <StackLayout Orientation="Horizontal">
+                            <Frame Padding="0" CornerRadius="15" HeightRequest="110" WidthRequest="100">
+
+                                <StackLayout>
+                                    <Frame Padding="0" CornerRadius="0" HeightRequest="100" WidthRequest="100">
+                                        <Grid>
+                                            <Image Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fupload%2Fingredients.jpg?alt=media" Aspect="AspectFill"/>
+                                            <Frame BackgroundColor="Black" Opacity=".4" Padding="0"/>
+                                            <Image Source="upload_add" VerticalOptions="CenterAndExpand" WidthRequest="45"/>
+                                        </Grid>
+                                    </Frame>
+                                    <Label Text="Carrot" TextColor="Black" FontSize="14" HorizontalTextAlignment="Center" Margin="0, 0, 0, 5"/>
+                                </StackLayout>
+                      
+                            </Frame>
+                            <Frame Padding="0" CornerRadius="15" HeightRequest="110" WidthRequest="100" Margin="10, 0, 0, 0">
+
+                                <StackLayout>
+                                    <Frame Padding="0" CornerRadius="0" HeightRequest="100" WidthRequest="100">
+                                        <Grid>
+                                            <Image Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fupload%2Fingredients.jpg?alt=media" Aspect="AspectFill"/>
+                                            <Frame BackgroundColor="Black" Opacity=".4" Padding="0"/>
+                                            <Image Source="upload_add" VerticalOptions="CenterAndExpand" WidthRequest="45"/>
+                                        </Grid>
+                                    </Frame>
+                                    <Label Text="Carrot" TextColor="Black" FontSize="14" HorizontalTextAlignment="Center" Margin="0, 0, 0, 5"/>
+                                </StackLayout>
+
+                            </Frame>
+                            <Frame Padding="0" CornerRadius="15" HeightRequest="110" WidthRequest="100" Margin="10, 0, 0, 0">
+
+                                <StackLayout>
+                                    <Frame Padding="0" CornerRadius="0" HeightRequest="100" WidthRequest="100">
+                                        <Grid>
+                                            <Image Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fupload%2Fingredients.jpg?alt=media" Aspect="AspectFill"/>
+                                            <Frame BackgroundColor="Black" Opacity=".4" Padding="0"/>
+                                            <Image Source="upload_add" VerticalOptions="CenterAndExpand" WidthRequest="45"/>
+                                        </Grid>
+                                    </Frame>
+                                    <Label Text="Carrot" TextColor="Black" FontSize="14" HorizontalTextAlignment="Center" Margin="0, 0, 0, 5"/>
+                                </StackLayout>
+
+                            </Frame>
+
+                        </StackLayout>
+            
+                    </StackLayout>
+                </ScrollView>
+
+                <Frame BackgroundColor="#e68b8b" CornerRadius="18" HorizontalOptions="Center" VerticalOptions="EndAndExpand" WidthRequest="170" Padding="0, 10, 0, 10" x:Name="register_loginButton" Margin="0, 0, 0, 10">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label Text="Return" FontSize="21" TextColor="White" x:Name="registerBtnLabel"/>
+                    </StackLayout>
+
+                </Frame>
+            </StackLayout>
+        </Frame>
+    </ContentPage.Content>
+</ContentPage>

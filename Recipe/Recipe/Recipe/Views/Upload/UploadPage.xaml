@@ -56,6 +56,9 @@
                         <StackLayout Orientation="Horizontal">
                             <StackLayout>
                                 <Frame Padding="0" WidthRequest="120" HeightRequest="85" CornerRadius="15">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="GetIngredient" />
+                                    </Frame.GestureRecognizers>
                                     <Grid>
                                         <Image Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fupload%2Fingredients.jpg?alt=media" Aspect="AspectFill"/>
                                         <Frame BackgroundColor="Black" Opacity=".6"></Frame>

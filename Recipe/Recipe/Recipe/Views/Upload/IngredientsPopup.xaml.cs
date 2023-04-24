@@ -97,7 +97,7 @@ namespace Recipe.Views.Upload
             }
         }
 
-        private async void OnAddIngredientButtonClicked(object sender, EventArgs e)
+        private void OnCloseButtonClick(object sender, EventArgs e)
         {
             Dismiss(loadedIngredients);
             // Pass loadedIngredients or addedIngredients to the appropriate method as needed.

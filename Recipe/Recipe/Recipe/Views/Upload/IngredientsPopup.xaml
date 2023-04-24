@@ -4,35 +4,27 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
     x:Class="Recipe.Views.Upload.IngredientsPopup"
-    HeightRequest="400"
     WidthRequest="200"
-    >
+    VerticalOptions="CenterAndExpand">
     <xct:Popup.Content>
-        <StackLayout>
-            <SearchBar x:Name="SearchBar" Placeholder="Search ingredients" />
-            <ScrollView>
-                <StackLayout x:Name="IngredientsStack" Orientation="Vertical" Padding="10">
-                    <!-- Dynamic ingredients will be added here -->
-                </StackLayout>
-            </ScrollView>
-            <Frame
-                VerticalOptions="End"
-                BackgroundColor="White"
-                HasShadow="True"
-                CornerRadius="28"
-                Margin="0, 0, 20, 20"
-                Padding="10"
-                HeightRequest="60"
-                WidthRequest="60"
-                HorizontalOptions="End">
-                <ImageButton
-                    Source="global_backbutton.png"
-                    BackgroundColor="Transparent"
-                    HeightRequest="56"
-                    WidthRequest="56"
-                    CornerRadius="28"
-                    Clicked="OnAddIngredientButtonClicked"/>
-            </Frame>
-        </StackLayout>
+        <Frame BackgroundColor="White" CornerRadius="15" Padding="0" HeightRequest="250">
+            <StackLayout>
+                <SearchBar x:Name="SearchBar" Placeholder="Search ingredients" />
+                <ScrollView>
+                    <StackLayout x:Name="IngredientsStack" Orientation="Vertical" Padding="10">
+                        <!-- Dynamic ingredients will be added here -->
+                    </StackLayout>
+                </ScrollView>
+
+                <Frame BackgroundColor="#e68b8b" CornerRadius="18" HorizontalOptions="Center" VerticalOptions="EndAndExpand" WidthRequest="170" Padding="0, 10, 0, 10" x:Name="register_loginButton" Margin="0, 0, 0, 10">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label Text="Return" FontSize="21" TextColor="White" x:Name="registerBtnLabel"/>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnCloseButtonClick"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+            </StackLayout>
+        </Frame>
     </xct:Popup.Content>
 </xct:Popup>

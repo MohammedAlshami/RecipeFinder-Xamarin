@@ -19,12 +19,19 @@ namespace Recipe.Views.Upload
 	{
 
         // Variables 
+
+        // Steps
         List<string> stepsList;
-		public UploadPage ()
+
+        // Ingredients
+        Dictionary<string, Dictionary<string, object>> loadedIngredients;
+        public UploadPage ()
 		{
 			InitializeComponent ();
             stepsList = new List<string> ();
-		}
+           loadedIngredients = new Dictionary<string, Dictionary<string, object>>();
+
+        }
         private async void AddIngredients(object sender, EventArgs e)
         {
             // TODO: Implement the AddIngredients function here
@@ -64,11 +71,11 @@ namespace Recipe.Views.Upload
 
         async void GetIngredient(object sender, EventArgs e)
         {
-/*            var result = await Navigation.ShowPopupAsync(new IngredientsPopup(loadedIngredients));
+            var result = await Navigation.ShowPopupAsync(new IngredientsPopup(loadedIngredients));
             if (result != null)
             {
                 loadedIngredients = result as Dictionary<string, Dictionary<string, object>>;
-            }*/
+            }
         }
 
 

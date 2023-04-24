@@ -15,7 +15,7 @@ namespace Recipe
         {
             InitializeComponent();
 
-            MainPage = new UploadPage();//Very important add this..
+            MainPage = new UploadPlayground();//Very important add this..
 
         }
 
