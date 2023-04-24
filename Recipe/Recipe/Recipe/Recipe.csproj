@@ -24,6 +24,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\Upload\UploadIngredients.xaml.cs">
+      <DependentUpon>UploadIngredients.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Update="Views\Authentication\Registration.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
@@ -60,7 +66,7 @@
     <EmbeddedResource Update="Views\Upload\UploadPagexaml.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Update="Views\Upload\UploadPlayground.xaml">
+    <EmbeddedResource Update="Views\Upload\UploadIngredients.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
   </ItemGroup>

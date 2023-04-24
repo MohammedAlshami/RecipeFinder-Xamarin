@@ -39,7 +39,6 @@ C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstand
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\Upload\StepsPopup.xaml.g.cs
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\Upload\UploadPage.xaml.g.cs
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\Upload\UploadPagexaml.xaml.g.cs
-C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\Upload\UploadPlayground.xaml.g.cs
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Recipe.AssemblyInfoInputs.cache
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Recipe.AssemblyInfo.cs
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Recipe.csproj.CoreCompileInputs.cache
@@ -48,3 +47,4 @@ C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstand
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\refint\Recipe.dll
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Recipe.pdb
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\ref\Recipe.dll
+C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\Upload\UploadIngredients.xaml.g.cs

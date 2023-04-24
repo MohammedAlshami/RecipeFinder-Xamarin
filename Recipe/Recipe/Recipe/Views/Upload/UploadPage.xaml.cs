@@ -19,15 +19,25 @@ namespace Recipe.Views.Upload
 	{
 
         // Variables 
-
+        RecipeHandler recipeHandler = new RecipeHandler();
         // Steps
         List<string> stepsList;
 
+        // links
+        private string videolink = null, thumbnail = null;
+
         // Ingredients
         Dictionary<string, Dictionary<string, object>> loadedIngredients;
+        private List<string> _selectedIngredients = new List<string>();
+
+        // initializing popups first to make the app faster
+        private UploadIngredients _ingredientPopup;
+
         public UploadPage ()
 		{
 			InitializeComponent ();
+            _ingredientPopup = new UploadIngredients(_selectedIngredients);
+
             stepsList = new List<string> ();
            loadedIngredients = new Dictionary<string, Dictionary<string, object>>();
 
@@ -65,18 +75,87 @@ namespace Recipe.Views.Upload
                 .PutAsync(await photo.OpenReadAsync());
 
 
-            var downloadlink = await task;
-            thumbnailImage.Source = downloadlink;
+            thumbnail = await task;
+            thumbnailImage.Source = thumbnail;
         }
 
         async void GetIngredient(object sender, EventArgs e)
         {
-            var result = await Navigation.ShowPopupAsync(new IngredientsPopup(loadedIngredients));
+            var result = await Navigation.ShowPopupAsync(_ingredientPopup);
             if (result != null)
             {
-                loadedIngredients = result as Dictionary<string, Dictionary<string, object>>;
+                _selectedIngredients = result as List<string>;
             }
         }
+        async void Upload_Video(System.Object sender, System.EventArgs e)
+        {
+
+            uploadLabel.IsVisible = false;
+            uploadProgressBar.IsVisible = true;
+            var video = await Xamarin.Essentials.MediaPicker.PickVideoAsync();
+
+            if (video == null)
+                return;
+
+            /* generating random name for the file*/
+            var fileExtension = Path.GetExtension(video.FileName);
+            var uniqueId = Guid.NewGuid().ToString();
+
+            var task = new FirebaseStorage("realtimedatabasetest-f226a.appspot.com",
+                new FirebaseStorageOptions
+                {
+                    ThrowOnCancel = true
+                })
+                .Child("DidYouSubscribe")
+                .Child("ToMyChannelYet")
+                .Child(uniqueId + fileExtension)
+                .PutAsync(await video.OpenReadAsync());
+
+            for (int i = 0; i <= 100; i += 5)
+            {
+                uploadProgressBar.Progress = i / 100.0;
+                await Task.Delay(50);
+            }
+
+            videolink = await task;
+            await DisplayAlert("Video Link", videolink, "OK");
+            uploadProgressBar.Progress = 100;
+
+        }
+        private List<string> AddKeywordsToList()
+        {
+            string keywordsText = keywords.Text;
+            List<string> keywordsList = new List<string>();
+
+            if (!string.IsNullOrEmpty(keywordsText))
+            {
+                string[] keywordsArray = keywordsText.Split(new char[] { ' ', '#', ',' }, StringSplitOptions.RemoveEmptyEntries);
+                keywordsList = keywordsArray.ToList();
+            }
+
+            return keywordsList;
+        }
+
+
+
+        private void onUploadButtonClick(object sender, EventArgs e)
+        {
+            // Your implementation here
+            // do checking
+
+            // upload
+            var recipe = new Recipes
+            {
+                Name = recipeTitle.Text,
+                Ingredients = _selectedIngredients,
+                Image = thumbnail,
+                Video = videolink,
+                Steps = stepsList,
+                Keywords = AddKeywordsToList()
+            };
+            recipeHandler.AddRecipe(recipe);
+        }
+
 
 
     }

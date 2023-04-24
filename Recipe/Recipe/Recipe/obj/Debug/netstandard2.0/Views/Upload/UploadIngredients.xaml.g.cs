@@ -8,13 +8,13 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Recipe.Views.Upload.UploadPlayground.xaml", "Views/Upload/UploadPlayground.xaml", typeof(global::Recipe.Views.Upload.UploadPlayground))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Recipe.Views.Upload.UploadIngredients.xaml", "Views/Upload/UploadIngredients.xaml", typeof(global::Recipe.Views.Upload.UploadIngredients))]
 
 namespace Recipe.Views.Upload {
     
     
-    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Upload\\UploadPlayground.xaml")]
-    public partial class UploadPlayground : global::Xamarin.Forms.ContentPage {
+    [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Upload\\UploadIngredients.xaml")]
+    public partial class UploadIngredients : global::Xamarin.CommunityToolkit.UI.Views.Popup {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private global::Xamarin.Forms.SearchBar SearchBar;
@@ -30,7 +30,7 @@ namespace Recipe.Views.Upload {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(UploadPlayground));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(UploadIngredients));
             SearchBar = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.SearchBar>(this, "SearchBar");
             IngredientsStack = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.StackLayout>(this, "IngredientsStack");
             register_loginButton = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Frame>(this, "register_loginButton");

@@ -38,9 +38,24 @@
                                 FontAttributes="Bold"
                                 FontSize="24"
                                 Margin="0, 15, 0, 0"
-                                />
-
+                                x:Name="uploadLabel"
+                            />
+                            <ProgressBar 
+                                x:Name="uploadProgressBar"
+                                ProgressColor="White"
+                                Progress="0"
+                                HeightRequest="5"
+                                WidthRequest="300"
+                                VerticalOptions="Center"
+                                HorizontalOptions="Center"
+                                Margin="0, 15, 0, 0"
+                                IsVisible="false"
+                            />
                         </StackLayout>
+
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="Upload_Video"/>
+                        </Frame.GestureRecognizers>
                     </Frame>
 
                 </Frame>
@@ -142,15 +157,36 @@
                 <BoxView Color="#EAEAEA" HeightRequest="2" Margin="5, 30, 5, 0" HorizontalOptions="FillAndExpand"/>
                 <StackLayout  Margin="15, 14, 15, 0">
                     <Label 
+                        Text="Recipe Title"
+                        TextColor="Black"
+                        FontSize="25"
+                        FontAttributes="bold"
+                        />
+                    <Frame BorderColor="#e68b8b" CornerRadius="20" Padding="10, 0, 10, 0" Margin="0, 10, 0, 0">
+                        <Entry Placeholder="Recipe Name" HeightRequest="80" x:Name="recipeTitle"/>
+                    </Frame>
+                </StackLayout>
+
+                <StackLayout  Margin="15, 14, 15, 0">
+                    <Label 
                         Text="Keywords"
                         TextColor="Black"
                         FontSize="25"
                         FontAttributes="bold"
                         />
-                    <Frame BorderColor="#e68b8b" CornerRadius="20" Padding="10, 0, 10, 0">
-                        <Entry Placeholder="#Chicken #Yemeni" HeightRequest="100" />
+                    <Frame BorderColor="#e68b8b" CornerRadius="20" Padding="10, 0, 10, 0" Margin="0, 10, 0, 0">
+                        <Entry Placeholder="#Chicken #Yemeni" HeightRequest="100" x:Name="keywords"/>
                     </Frame>
                 </StackLayout>
+                <Frame BackgroundColor="#e68b8b" CornerRadius="18" HorizontalOptions="Center" VerticalOptions="EndAndExpand" WidthRequest="170" Padding="0, 10, 0, 10" x:Name="register_loginButton" Margin="0, 10, 0, 10">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label Text="Upload" FontSize="21" TextColor="White" x:Name="registerBtnLabel"/>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="onUploadButtonClick"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>
