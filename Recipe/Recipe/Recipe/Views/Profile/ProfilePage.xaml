@@ -13,6 +13,7 @@
              HorizontalTextAlignment="Center"
              VerticalTextAlignment="Center"
                 />
+            <BoxView Color="#e6e6e5" HeightRequest="2" Margin="20, 10, 20, 0" HorizontalOptions="FillAndExpand" />
 
             <StackLayout>
                 <Frame CornerRadius="100" HeightRequest="150" WidthRequest="150" Padding="0"  HorizontalOptions="Center" VerticalOptions="Center" HasShadow="True" BackgroundColor="LightGray" Opacity=".4">

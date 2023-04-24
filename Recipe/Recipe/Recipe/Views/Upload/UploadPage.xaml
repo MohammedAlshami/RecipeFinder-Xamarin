@@ -1,0 +1,154 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="Recipe.Views.Upload.UploadPage">
+    <ContentPage.Content>
+        <ScrollView  HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
+            <StackLayout>
+                <Label
+             Text="Upload"
+             FontAttributes="Bold"
+             TextColor="Black"
+             FontSize="23"  
+             Margin="10, 5, 0, 0"
+             HorizontalTextAlignment="Center"
+             VerticalTextAlignment="Center"
+                />
+                <BoxView Color="#e6e6e5" HeightRequest="2" Margin="5, 0, 5, 0" HorizontalOptions="FillAndExpand" />
+
+
+                <Frame
+                    xct:ShadowEffect.Color="Black"  xct:ShadowEffect.OffsetY="0" xct:ShadowEffect.Radius="5" HasShadow="True"
+                    Padding="5"  Margin="15, 15, 15, 0"
+                    CornerRadius="14"
+                    HeightRequest="250"
+                    >
+
+                    <Frame xct:ShadowEffect.Color="Black"  xct:ShadowEffect.OffsetY="0" xct:ShadowEffect.Radius="5" HasShadow="True"
+                           CornerRadius="14"
+                           BackgroundColor="Black"
+                           Opacity=".4">
+                        <StackLayout HorizontalOptions="Center">
+                            <Image Source="upload_upload" WidthRequest="150"/>
+                            <Label 
+                                Text="Upload Your Video" 
+                                TextColor="White" 
+                                HorizontalTextAlignment="Center"
+                                FontAttributes="Bold"
+                                FontSize="24"
+                                Margin="0, 15, 0, 0"
+                                />
+
+                        </StackLayout>
+                    </Frame>
+
+                </Frame>
+
+                <StackLayout  Margin="15, 14, 15, 0">
+                    <Label 
+                        Text="Recipe"
+                        TextColor="Black"
+                        FontSize="25"
+                        FontAttributes="bold"
+                        />
+                    <ScrollView Orientation="Horizontal" HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout>
+                                <Frame Padding="0" WidthRequest="120" HeightRequest="85" CornerRadius="15">
+                                    <Grid>
+                                        <Image Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fupload%2Fingredients.jpg?alt=media" Aspect="AspectFill"/>
+                                        <Frame BackgroundColor="Black" Opacity=".6"></Frame>
+                                        <Image Source="upload_add" WidthRequest="40" HorizontalOptions="Center"/>
+                                    </Grid>
+                                </Frame>
+
+
+                                <Label 
+                                Text="Ingredients" 
+                                HorizontalOptions="Center"
+                                FontSize="17"
+                                FontAttributes="Bold"
+                                TextColor="#1a1a1a"/>
+                            </StackLayout>
+                            <StackLayout Margin="7, 0, 0, 0">
+                                <Frame Padding="0" WidthRequest="120" HeightRequest="85" CornerRadius="15">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="GetSteps" />
+                                    </Frame.GestureRecognizers>
+                                    <Grid>
+                                        <Image Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fupload%2Fsteps.jpg?alt=media" Aspect="AspectFill"/>
+                                        <Frame BackgroundColor="Black" Opacity=".6"></Frame>
+                                        <Image Source="upload_add" WidthRequest="40" HorizontalOptions="Center"/>
+                                    </Grid>
+                                </Frame>
+
+
+
+                                <Label 
+                                Text="Steps" 
+                                HorizontalOptions="Center"
+                                FontSize="17"
+                                FontAttributes="Bold"
+                                TextColor="#1a1a1a"/>
+                            </StackLayout>
+                            <StackLayout Margin="7, 0, 0, 0">
+                                <Frame Padding="0" WidthRequest="120" HeightRequest="85" CornerRadius="15">
+                                    <Frame.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="UploadThumbnail" />
+                                    </Frame.GestureRecognizers>
+                                    <Grid>
+                                        <Image x:Name="thumbnailImage" Source="" Aspect="AspectFill"/>
+                                        <Frame BackgroundColor="Black" Opacity=".6"></Frame>
+                                        <Image Source="upload_add" WidthRequest="40" HorizontalOptions="Center"/>
+                                    </Grid>
+                                </Frame>
+
+
+                                <Label 
+                                Text="Thumbnail" 
+                                HorizontalOptions="Center"
+                                FontSize="17"
+                                FontAttributes="Bold"
+                                TextColor="#1a1a1a"/>
+                            </StackLayout>
+                            <StackLayout Margin="7, 0, 0, 0">
+                                <Frame Padding="0" WidthRequest="120" HeightRequest="85" CornerRadius="15">
+                                    <Grid>
+                                        <Image x:Name="recipe_details" Source="" Aspect="AspectFill"/>
+                                        <Frame BackgroundColor="Black" Opacity=".6"></Frame>
+                                        <Image Source="upload_add" WidthRequest="40" HorizontalOptions="Center"/>
+                                    </Grid>
+                                </Frame>
+
+
+                                <Label 
+                                Text="Details" 
+                                HorizontalOptions="Center"
+                                FontSize="17"
+                                FontAttributes="Bold"
+                                TextColor="#1a1a1a"/>
+                            </StackLayout>
+
+                        </StackLayout>
+                        
+                        
+                    </ScrollView>
+
+                </StackLayout>
+                <BoxView Color="#EAEAEA" HeightRequest="2" Margin="5, 30, 5, 0" HorizontalOptions="FillAndExpand"/>
+                <StackLayout  Margin="15, 14, 15, 0">
+                    <Label 
+                        Text="Keywords"
+                        TextColor="Black"
+                        FontSize="25"
+                        FontAttributes="bold"
+                        />
+                    <Frame BorderColor="#e68b8b" CornerRadius="20" Padding="10, 0, 10, 0">
+                        <Entry Placeholder="#Chicken #Yemeni" HeightRequest="100" />
+                    </Frame>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

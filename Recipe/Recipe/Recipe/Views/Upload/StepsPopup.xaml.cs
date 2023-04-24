@@ -39,29 +39,29 @@ namespace Recipe.Views
         {
             StepsListStackLayout.Children.Clear();
 
+            var stepCount = 1;
             foreach (string step in stepsList)
             {
                 var label = new Label
                 {
-                    Text = step,
-                    FontSize = 18,
+                    Text = (stepCount++) + ". " + step,
+                    FontSize = 15,
                     Margin = new Thickness(10, 5),
                     Padding = new Thickness(10, 5),
                     TextColor = Color.Black
                 };
 
-                var deleteButton = new Button
+                var deleteButton = new ImageButton
                 {
-                    Text = "Delete",
-                    FontSize = 16,
-                    TextColor = Color.Red,
+                    Source = "step_remove_red",
+                    WidthRequest = 30,
+                    HeightRequest = 30,
                     BackgroundColor = Color.Transparent,
-                    Margin = new Thickness(10, 5),
-                    Padding = new Thickness(10, 5)
+                    Margin = new Thickness(10, 5)
                 };
                 deleteButton.Clicked += (sender, e) =>
                 {
-                    var button = (Button)sender;
+                    var button = (ImageButton)sender;
                     var frame_1 = (Frame)button.Parent.Parent;
                     var content = frame_1.Content;
 
@@ -96,7 +96,7 @@ namespace Recipe.Views
             }
         }
 
-        void Button_Clicked(object sender, EventArgs e)
+        void OnCloseButtonClick(object sender, EventArgs e)
         {
             Dismiss(stepsList);
         }

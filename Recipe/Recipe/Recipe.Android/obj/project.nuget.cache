@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "OItp+rBjX008F5lUolAwEd2dq9Aqg/2jJP7Muk83cr6q2W+Y1/a6iSZg3ZwufOCO0XIqzK6I7Z3+Hk3tOLun3A==",
+  "dgSpecHash": "UErQzG4r2MAAQ3+h/ikmHbyqWkHGYLCfCuHLWRlETNB0092GcX7eEkRZYX/MQICp7NUuS6Z/MaEfMAPkul7efg==",
   "success": true,
   "projectFilePath": "C:\\Users\\Tazz\\source\\repos\\Recipe_Finder\\Recipe\\Recipe\\Recipe.Android\\Recipe.Android.csproj",
   "expectedPackageFiles": [
@@ -13,6 +13,7 @@
     "C:\\Users\\Tazz\\.nuget\\packages\\system.reflection\\4.3.0\\system.reflection.4.3.0.nupkg.sha512",
     "C:\\Users\\Tazz\\.nuget\\packages\\system.reflection.typeextensions\\4.3.0\\system.reflection.typeextensions.4.3.0.nupkg.sha512",
     "C:\\Users\\Tazz\\.nuget\\packages\\system.runtime.interopservices.windowsruntime\\4.3.0\\system.runtime.interopservices.windowsruntime.4.3.0.nupkg.sha512",
+    "C:\\Users\\Tazz\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
     "C:\\Users\\Tazz\\.nuget\\packages\\xamarin.androidx.activity\\1.2.4.1\\xamarin.androidx.activity.1.2.4.1.nupkg.sha512",
     "C:\\Users\\Tazz\\.nuget\\packages\\xamarin.androidx.annotation\\1.2.0.1\\xamarin.androidx.annotation.1.2.0.1.nupkg.sha512",
     "C:\\Users\\Tazz\\.nuget\\packages\\xamarin.androidx.annotation.experimental\\1.1.0.1\\xamarin.androidx.annotation.experimental.1.1.0.1.nupkg.sha512",

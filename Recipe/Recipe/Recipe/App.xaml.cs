@@ -5,6 +5,7 @@ using Recipe.Views.Authentication;
 using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using Recipe.Views.Upload;
 
 namespace Recipe
 {
@@ -14,7 +15,7 @@ namespace Recipe
         {
             InitializeComponent();
 
-            MainPage = new Registration();//Very important add this..
+            MainPage = new UploadPage();//Very important add this..
 
         }
 

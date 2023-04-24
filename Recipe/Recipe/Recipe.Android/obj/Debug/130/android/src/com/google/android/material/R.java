@@ -1729,9 +1729,9 @@ public final class R {
 		public static final int notification_template_icon_low_bg = 0x7f070092;
 		public static final int notification_tile_bg = 0x7f070093;
 		public static final int notify_panel_notification_icon_bg = 0x7f070094;
-		public static final int test_custom_background = 0x7f07009b;
-		public static final int tooltip_frame_dark = 0x7f07009c;
-		public static final int tooltip_frame_light = 0x7f07009d;
+		public static final int test_custom_background = 0x7f07009d;
+		public static final int tooltip_frame_dark = 0x7f07009e;
+		public static final int tooltip_frame_light = 0x7f07009f;
 	}
 	public static final class id {
 		public static final int BOTTOM_END = 0x7f080001;
@@ -4688,10 +4688,10 @@ public final class R {
 		public static final int ViewStubCompat_android_layout = 1;
 	}
 	public static final class xml {
-		public static final int standalone_badge = 0x7f110001;
-		public static final int standalone_badge_gravity_bottom_end = 0x7f110002;
-		public static final int standalone_badge_gravity_bottom_start = 0x7f110003;
-		public static final int standalone_badge_gravity_top_start = 0x7f110004;
-		public static final int standalone_badge_offset = 0x7f110005;
+		public static final int standalone_badge = 0x7f110002;
+		public static final int standalone_badge_gravity_bottom_end = 0x7f110003;
+		public static final int standalone_badge_gravity_bottom_start = 0x7f110004;
+		public static final int standalone_badge_gravity_top_start = 0x7f110005;
+		public static final int standalone_badge_offset = 0x7f110006;
 	}
 }

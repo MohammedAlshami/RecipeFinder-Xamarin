@@ -10,20 +10,33 @@
              Color="Transparent">
 
 
-    <Frame CornerRadius="20" HasShadow="True">
+    <Frame CornerRadius="15" HasShadow="True">
         <StackLayout>
-            <Button Text="Close" TextColor="Red" Clicked="Button_Clicked"/>
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="Auto" />
                 </Grid.ColumnDefinitions>
                 <Entry x:Name="StepsEntry" Placeholder="Enter your steps here" Grid.Column="0" />
-                <Button Text="Add Step" Clicked="AddStepButton_Clicked" Grid.Column="1" />
+                <Image Source="step_add_blue" WidthRequest="30" HeightRequest="30" Grid.Column="1">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="AddStepButton_Clicked" />
+                    </Image.GestureRecognizers>
+                </Image>
             </Grid>
+
             <ScrollView>
                 <StackLayout x:Name="StepsListStackLayout" />
             </ScrollView>
+            <Frame BackgroundColor="#e68b8b" CornerRadius="18" HorizontalOptions="Center" VerticalOptions="EndAndExpand" WidthRequest="170" Padding="0, 10, 0, 10" x:Name="register_loginButton" Margin="0, 0, 0, 10">
+                <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                    <Label Text="Return" FontSize="21" TextColor="White" x:Name="registerBtnLabel"/>
+                </StackLayout>
+                <Frame.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="OnCloseButtonClick"/>
+                </Frame.GestureRecognizers>
+            </Frame>
+
         </StackLayout>
     </Frame>
 

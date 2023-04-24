@@ -1939,9 +1939,14 @@ int drawable profile_logout 0x7f070097
 int drawable profile_profile 0x7f070098
 int drawable profile_setting 0x7f070099
 int drawable profile_upload 0x7f07009a
-int drawable test_custom_background 0x7f07009b
-int drawable tooltip_frame_dark 0x7f07009c
-int drawable tooltip_frame_light 0x7f07009d
+int drawable step_add_blue 0x7f07009b
+int drawable step_remove_red 0x7f07009c
+int drawable test_custom_background 0x7f07009d
+int drawable tooltip_frame_dark 0x7f07009e
+int drawable tooltip_frame_light 0x7f07009f
+int drawable upload_add 0x7f0700a0
+int drawable upload_remove 0x7f0700a1
+int drawable upload_upload 0x7f0700a2
 int id ALT 0x7f080000
 int id BOTTOM_END 0x7f080001
 int id BOTTOM_START 0x7f080002
@@ -5585,10 +5590,11 @@ int styleable ViewTransition_upDuration 13
 int styleable ViewTransition_viewTransitionMode 14
 int[] styleable include { 0x7f0300eb }
 int styleable include_constraintSet 0
-int xml image_share_filepaths 0x7f110000
-int xml standalone_badge 0x7f110001
-int xml standalone_badge_gravity_bottom_end 0x7f110002
-int xml standalone_badge_gravity_bottom_start 0x7f110003
-int xml standalone_badge_gravity_top_start 0x7f110004
-int xml standalone_badge_offset 0x7f110005
-int xml xamarin_essentials_fileprovider_file_paths 0x7f110006
+int xml file_paths 0x7f110000
+int xml image_share_filepaths 0x7f110001
+int xml standalone_badge 0x7f110002
+int xml standalone_badge_gravity_bottom_end 0x7f110003
+int xml standalone_badge_gravity_bottom_start 0x7f110004
+int xml standalone_badge_gravity_top_start 0x7f110005
+int xml standalone_badge_offset 0x7f110006
+int xml xamarin_essentials_fileprovider_file_paths 0x7f110007

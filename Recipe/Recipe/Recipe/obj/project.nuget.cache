@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "n6wYPnS1L7jKYb9BBOhOzVo8amMzj1tpGg67xtjlxH7rmFm1hdH5oOX2ZgMgTaa8Y6EANLxXHT6JCAUnLp+9ew==",
+  "dgSpecHash": "lYgmNvMP9QQSJwxaSr9CHR1/XpadQs48N27qKmMtrhoPAapZA1RtJE5gdO7U52Z5wx9/0Hw1J+pL+cs+WhjhQw==",
   "success": true,
   "projectFilePath": "C:\\Users\\Tazz\\source\\repos\\Recipe_Finder\\Recipe\\Recipe\\Recipe\\Recipe.csproj",
   "expectedPackageFiles": [
@@ -25,6 +25,7 @@
     "C:\\Users\\Tazz\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\Tazz\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
     "C:\\Users\\Tazz\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+    "C:\\Users\\Tazz\\.nuget\\packages\\xam.plugin.media\\5.0.1\\xam.plugin.media.5.0.1.nupkg.sha512",
     "C:\\Users\\Tazz\\.nuget\\packages\\xamarin.communitytoolkit\\2.0.5\\xamarin.communitytoolkit.2.0.5.nupkg.sha512",
     "C:\\Users\\Tazz\\.nuget\\packages\\xamarin.essentials\\1.7.5\\xamarin.essentials.1.7.5.nupkg.sha512",
     "C:\\Users\\Tazz\\.nuget\\packages\\xamarin.forms\\5.0.0.2578\\xamarin.forms.5.0.0.2578.nupkg.sha512"

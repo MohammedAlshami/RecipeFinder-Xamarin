@@ -1,13 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Recipe.Views.Camera.CameraPage">
+             x:Class="Recipe.Views.Camera.CameraPage"
+             BackgroundColor="black"
+             NavigationPage.HasNavigationBar="False"
+             >
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Camera Page"
-                   FontSize="30"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Label Text="Please take a photo" FontSize="Title" Margin="10"/>
+            <Image x:Name="imagePreview" HeightRequest="300" WidthRequest="300" Margin="10"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
