@@ -1,5 +1,6 @@
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\Recipe.iOS.exe
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\Recipe.iOS.pdb
+C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\Firebase.Auth.dll
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\Firebase.dll
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\Firebase.Storage.dll
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.iOS\bin\iPhone\Debug\LiteDB.dll

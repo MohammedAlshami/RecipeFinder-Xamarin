@@ -48,13 +48,13 @@
                         <Frame HasShadow="True" CornerRadius="20" Padding="15, 5, 0, 5" Margin="10" xct:ShadowEffect.Color="Black"  xct:ShadowEffect.OffsetY="0" xct:ShadowEffect.Radius="5">
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="login_email" WidthRequest="30"/>
-                                <Entry  Placeholder="email@exassssmple.com" PlaceholderColor="LightGray" TextColor="Black"/>
+                                <Entry  Placeholder="email@exassssmple.com" PlaceholderColor="LightGray" TextColor="Black" x:Name="loginuserEmail"  Text=""/>
                             </StackLayout>
                         </Frame>
                         <Frame HasShadow="True" CornerRadius="20" Padding="15, 5, 0, 5" Margin="10"  xct:ShadowEffect.Color="Black"  xct:ShadowEffect.OffsetY="0" xct:ShadowEffect.Radius="5">
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="login_lock" WidthRequest="30"/>
-                                <Entry  Placeholder="**************************" PlaceholderColor="LightGray" TextColor="Black"/>
+                                <Entry  Placeholder="**************************" PlaceholderColor="LightGray" TextColor="Black" x:Name="loginuserPassword"  Text=""/>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
@@ -64,19 +64,19 @@
                         <Frame HasShadow="True" CornerRadius="20" Padding="15, 5, 0, 5" Margin="10" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="0" xct:ShadowEffect.Radius="5">
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="login_email" WidthRequest="30" />
-                                <Entry Placeholder="email@exassssmple.com" PlaceholderColor="LightGray" TextColor="Black" WidthRequest="220" />
+                                <Entry Placeholder="email@exassssmple.com" PlaceholderColor="LightGray" TextColor="Black" WidthRequest="220"  x:Name="signupuserEmail"  Text=""/>
                             </StackLayout>
                         </Frame>
                         <Frame HasShadow="True" CornerRadius="20" Padding="15, 5, 0, 5" Margin="10" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="0" xct:ShadowEffect.Radius="5">
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="login_lock" WidthRequest="30" />
-                                <Entry Placeholder="**************************" PlaceholderColor="LightGray" TextColor="Black" WidthRequest="220" />
+                                <Entry Placeholder="**************************" PlaceholderColor="LightGray" TextColor="Black" WidthRequest="220"  x:Name="signupuserPassword" Text=""/>
                             </StackLayout>
                         </Frame>
                         <Frame HasShadow="True" CornerRadius="20" Padding="15, 5, 0, 5" Margin="10" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="0" xct:ShadowEffect.Radius="5">
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="login_lock" WidthRequest="30" />
-                                <Entry Placeholder="Confirm Password" PlaceholderColor="LightGray" TextColor="Black" WidthRequest="220" />
+                                <Entry Placeholder="Confirm Password" PlaceholderColor="LightGray" TextColor="Black" WidthRequest="220"  x:Name="userConfirmPassword"  Text=""/>
                             </StackLayout>
                         </Frame>
                     </StackLayout>
@@ -90,13 +90,23 @@
                 </StackLayout>
 
 
-                <Frame BackgroundColor="#e68b8b" CornerRadius="18" HorizontalOptions="Center" WidthRequest="170"  Padding="0, 10, 0, 10" x:Name="register_loginButton" Margin="0, 50, 0, 0">
+                <Frame BackgroundColor="#e68b8b" CornerRadius="18" HorizontalOptions="Center" WidthRequest="170"  Padding="0, 10, 0, 10" x:Name="register_loginButton" Margin="0, 80, 0, 0">
                     <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
-                        <Label Text="Sign In" FontSize="21" TextColor="White" x:Name="registerBtnLabel"/>
+                        <Label Text="Sign In" FontSize="21" TextColor="White" x:Name="loginBtnLabel"/>
                         <Image Source="login_arrow" HeightRequest="35" Margin="0, -2, 0, 0"/>
                     </StackLayout>
                     <Frame.GestureRecognizers>
                         <TapGestureRecognizer Tapped="OnLoginButtonTapped"/>
+                    </Frame.GestureRecognizers>
+                </Frame>
+                
+                <Frame BackgroundColor="#e68b8b" CornerRadius="18" HorizontalOptions="Center" WidthRequest="170"  Padding="0, 10, 0, 10" x:Name="register_signupButton" Margin="0, 50, 0, 0" IsVisible="False">
+                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" HorizontalOptions="Center">
+                        <Label Text="Sign Up" FontSize="21" TextColor="White" x:Name="signupBtnLabel"/>
+                        <Image Source="login_arrow" HeightRequest="35" Margin="0, -2, 0, 0"/>
+                    </StackLayout>
+                    <Frame.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="OnSignupButtonTapped"/>
                     </Frame.GestureRecognizers>
                 </Frame>
 

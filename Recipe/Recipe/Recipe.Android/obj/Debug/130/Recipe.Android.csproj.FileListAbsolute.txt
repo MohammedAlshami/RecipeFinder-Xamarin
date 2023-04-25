@@ -1430,8 +1430,10 @@ C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\upload_upload.png
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\step_add_blue.png
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\step_remove_red.png
+C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\ingredients_default.jpg
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\uploadflags.txt
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\resolvedassemblies.hash
+C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\android\assets\Firebase.Auth.dll
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\android\assets\Firebase.dll
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\android\assets\Firebase.Storage.dll
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\android\assets\FormsViewGroup.dll
@@ -2039,4 +2041,3 @@ C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\stamp\_GenerateJavaStubs.stamp
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\stamp\_ResolveLibraryProjectImports.stamp
-C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Debug\130\res\drawable\ingredients_default.jpg

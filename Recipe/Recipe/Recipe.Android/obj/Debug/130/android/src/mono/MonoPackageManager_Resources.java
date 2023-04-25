@@ -3,6 +3,7 @@ public class MonoPackageManager_Resources {
 	public static String[] Assemblies = new String[]{
 		/* We need to ensure that "Recipe.Android.dll" comes first in this list. */
 		"Recipe.Android.dll",
+		"Firebase.Auth.dll",
 		"Firebase.dll",
 		"Firebase.Storage.dll",
 		"FormsViewGroup.dll",
