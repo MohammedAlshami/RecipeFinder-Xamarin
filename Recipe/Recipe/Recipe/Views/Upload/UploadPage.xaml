@@ -130,23 +130,6 @@
                                 FontAttributes="Bold"
                                 TextColor="#1a1a1a"/>
                             </StackLayout>
-                            <StackLayout Margin="7, 0, 0, 0">
-                                <Frame Padding="0" WidthRequest="120" HeightRequest="85" CornerRadius="15">
-                                    <Grid>
-                                        <Image x:Name="recipe_details" Source="" Aspect="AspectFill"/>
-                                        <Frame BackgroundColor="Black" Opacity=".6"></Frame>
-                                        <Image Source="upload_add" WidthRequest="40" HorizontalOptions="Center"/>
-                                    </Grid>
-                                </Frame>
-
-
-                                <Label 
-                                Text="Details" 
-                                HorizontalOptions="Center"
-                                FontSize="17"
-                                FontAttributes="Bold"
-                                TextColor="#1a1a1a"/>
-                            </StackLayout>
 
                         </StackLayout>
                         

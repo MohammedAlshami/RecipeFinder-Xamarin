@@ -13,9 +13,11 @@ namespace Recipe.Views.Profile
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ProfilePage : ContentPage
     {
+        private UploadPage upload;
         public ProfilePage()
         {
             InitializeComponent();
+            upload= new UploadPage();
         }
 
         private void ProfileFrame_Tapped(object sender, EventArgs e)
@@ -31,7 +33,7 @@ namespace Recipe.Views.Profile
         {
             // Handle upload frame tapped
             // Code to handle the frame click event
-            Navigation.PushAsync(new UploadPagexaml());
+            Navigation.PushAsync(upload);
         }
 
 

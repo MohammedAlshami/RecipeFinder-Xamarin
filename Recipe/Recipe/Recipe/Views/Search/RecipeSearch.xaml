@@ -1,13 +1,32 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Recipe.Views.RecipeSearch">
+             x:Class="Recipe.Views.RecipeSearch"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit">
 
     <ContentPage.Content>
         <StackLayout>
 
             <ScrollView>
-                <StackLayout x:Name="RecipeList" />
+                <StackLayout>
+                    <StackLayout Orientation="Horizontal" Margin="0, 0, 0, 40">
+
+                        <ImageButton x:Name="SearchBackBtn" Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Icons%2Farrow_back_ios_FILL0_wght500_GRAD0_opsz48.png?alt=media" 
+                                 WidthRequest="30" BackgroundColor="Transparent"
+                                 Padding="0, 30, 0, 15" 
+                                 Margin="20, 0, 0, 0" 
+                                 IsVisible="false"
+                                 Clicked="backBtn"/>
+
+
+                        <Frame Padding="0" Margin="30, 20, 40, 0" CornerRadius="15" x:Name="homeSearchFrame"                  xct:ShadowEffect.Color="Black"
+                        xct:ShadowEffect.Radius="10">
+                            <SearchBar x:Name="HomeSearchBar" Placeholder="Search ingredients" TextChanged="SearchRecipes"/>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout x:Name="RecipeList" />
+
+                </StackLayout>
             </ScrollView>
         </StackLayout>
     </ContentPage.Content>

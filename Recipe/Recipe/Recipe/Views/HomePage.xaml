@@ -23,34 +23,62 @@
                                  Margin="20, 0, 0, 0" 
                                  IsVisible="false"
                                  Clicked="backBtn"/>
-                    
-                    <Frame x:Name="homeSearchFrame" 
-                        CornerRadius="15" HasShadow="True" 
-                        Margin="25, 25, 25, 10"
-                        Padding="5, 15, 5, 15" 
-                        HeightRequest="20"    
-                        xct:ShadowEffect.Color="Black"
+
+  
+                    <Frame Padding="0" Margin="30, 20, 40, 0" CornerRadius="15" x:Name="homeSearchFrame"                  xct:ShadowEffect.Color="Black"
                         xct:ShadowEffect.Radius="10">
-
-                        <SearchBar x:Name="HomeSearchBar"
-                        Placeholder="What are you craving" BackgroundColor="Transparent" 
-                        PlaceholderColor="Gray" 
-                        CancelButtonColor="Red"
-                        HeightRequest="20"
-                        HorizontalOptions="CenterAndExpand"
-                        VerticalOptions="Start"
-                        Focused="ChangeFrameHeight"
-                        TextChanged="SearchRecipes"/>
-
-                </Frame>
+                        <SearchBar x:Name="HomeSearchBar" Placeholder="Search ingredients" TextChanged="SearchRecipes" Focused="ChangeFrameHeight"/>
+                    </Frame>
                 </StackLayout>
                 <StackLayout  x:Name="searchStack">
                     
                 </StackLayout>
 
+                <StackLayout  Margin="25,10, 25, 0" IsVisible="false">
+                 
+                </StackLayout>
 
                 <StackLayout x:Name="HomeSearchOption" Margin="25,10, 25, 0" IsVisible="false">
-                    <Label Text="Cuisines" TextColor="Black" FontSize="22" Margin="0, 0, 0, 15"/>
+                    <Label Text="Popular searches" TextColor="Black" FontSize="20" Margin="0, 0, 0, 15"/>
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
+                            <Label Text="chicken" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                        </Frame>
+                        <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
+                            <Label Text="laksa" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                        </Frame>
+                        <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
+                            <Label Text="burger" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                        </Frame>
+                        <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
+                            <Label Text="nasi ayam" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
+                            <Label Text="nasi lemak" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                        </Frame>
+                        <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
+                            <Label Text="ayam penyet" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                        </Frame>
+                        <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
+                            <Label Text="nasi" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                        </Frame>
+                        <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
+                            <Label Text="diaksa" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                        </Frame>
+                    </StackLayout>
+
+                    <StackLayout Orientation="Horizontal">
+                        <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
+                            <Label Text="nasi goreng" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                        </Frame>
+                        <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
+                            <Label Text="d laksa" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                        </Frame>
+
+                    </StackLayout>
+                    <Label Text="Cuisines" TextColor="Black" FontSize="20" Margin="0, 20, 0, 15"/>
                     <StackLayout Orientation="Horizontal">
                         <StackLayout Margin="0, 0, 0, 0">
                             <Frame Padding="0" CornerRadius="15" HeightRequest="85" WidthRequest="110" HasShadow="True">

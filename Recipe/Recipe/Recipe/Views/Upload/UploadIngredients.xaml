@@ -10,7 +10,7 @@
             <StackLayout>
                 <Frame Padding="0" Margin="20" CornerRadius="15">
                 <SearchBar x:Name="SearchBar" Placeholder="Search ingredients" TextChanged="FilterIngredients" />
-            </Frame>
+                </Frame>
             <Grid>
                 <ScrollView  HeightRequest="700">
                     <StackLayout x:Name="IngredientsStack" Orientation="Vertical" Padding="10" Margin="10, 0, 10, 0" HorizontalOptions="CenterAndExpand">

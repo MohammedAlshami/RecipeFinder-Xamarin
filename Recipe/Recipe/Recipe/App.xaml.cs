@@ -15,7 +15,7 @@ namespace Recipe
         {
             InitializeComponent();
 
-            MainPage = new Registration();//Very important add this..
+            MainPage = new BottomNavigation();//Very important add this..
 
         }
 

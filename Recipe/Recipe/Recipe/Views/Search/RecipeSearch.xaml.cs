@@ -21,6 +21,7 @@ namespace Recipe.Views
             InitializeComponent();
             recipeHandler = new RecipeHandler();
             this.searchquery = searchQuery;
+            HomeSearchBar.Text = searchQuery;
             displayRecipesAsync();
             Console.WriteLine(searchQuery);
 
@@ -55,11 +56,12 @@ namespace Recipe.Views
                     {
                         CornerRadius = 15,
                         HasShadow = true,
-                        HeightRequest = 200,
+                        HeightRequest = 150,
                         WidthRequest = 150,
                         VerticalOptions = LayoutOptions.CenterAndExpand,
                         HorizontalOptions = LayoutOptions.CenterAndExpand,
-                        Padding = 0
+                        Padding = 0,
+                        Margin = new Thickness(10, 0, 10, 10)
                     };
                     // Add a tap gesture recognizer to the frame
                     var tapGestureRecognizer = new TapGestureRecognizer();
@@ -69,7 +71,7 @@ namespace Recipe.Views
 
 
                     // Create a grid layout to hold the recipe image and name
-                    var gridLayout = new Grid
+                    var recipestack = new StackLayout
                     {
                         VerticalOptions = LayoutOptions.FillAndExpand,
                         HorizontalOptions = LayoutOptions.FillAndExpand,
@@ -79,7 +81,8 @@ namespace Recipe.Views
                     // Create an image view for the recipe image
                     var recipeImage = new Image
                     {
-                        Source = ImageSource.FromUri(new Uri(recipe.Image)), // Set the image source based on your recipe model
+                        Source = recipe.Image, // Set the image source based on your recipe model
+                        HeightRequest = 120,
                         Aspect = Aspect.AspectFill
                     };
 
@@ -91,17 +94,15 @@ namespace Recipe.Views
                         FontAttributes = FontAttributes.Bold,
                         HorizontalOptions = LayoutOptions.Center,
                         VerticalOptions = LayoutOptions.Center,
-                        LineBreakMode = LineBreakMode.WordWrap,
-                        TextColor = Color.Black,
-                        Padding = new Thickness(0, 5, 0, 0)
+                        TextColor = Color.Black
                     };
 
                     // Add the image view and label to the grid layout
-                    gridLayout.Children.Add(recipeImage, 0, 0);
-                    gridLayout.Children.Add(recipeName, 0, 1);
+                    recipestack.Children.Add(recipeImage);
+                    recipestack.Children.Add(recipeName);
 
                     // Set the grid layout as the content of the frame
-                    frame.Content = gridLayout;
+                    frame.Content = recipestack;
 
                     // Add the frame to the row stack layout
                     rowStackLayout.Children.Add(frame);
@@ -141,6 +142,21 @@ namespace Recipe.Views
             });
         }
 
+        private async void SearchRecipes(object sender, TextChangedEventArgs args)
+        {
+
+            searchquery = HomeSearchBar.Text;
+            displayRecipesAsync();
+        }
+
+        private async void backBtn(object sender, EventArgs e)
+        {
+            await Device.InvokeOnMainThreadAsync(() =>
+            {
+                Navigation.PushAsync(new HomePage());
+            });
+
+        }
 
     }
 }
