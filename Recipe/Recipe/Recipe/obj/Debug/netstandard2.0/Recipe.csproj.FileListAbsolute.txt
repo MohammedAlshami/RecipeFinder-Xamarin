@@ -28,7 +28,6 @@ C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstand
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\App.xaml.g.cs
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\MainPage.xaml.g.cs
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\Authentication\Registration.xaml.g.cs
-C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\Camera\CameraPage.xaml.g.cs
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\HomePage.xaml.g.cs
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\Navigation\BottomNavigation.xaml.g.cs
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\Profile\ProfilePage.xaml.g.cs
@@ -48,3 +47,4 @@ C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstand
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\refint\Recipe.dll
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Recipe.pdb
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\ref\Recipe.dll
+C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe\obj\Debug\netstandard2.0\Views\Explore\ExplorePage.xaml.g.cs

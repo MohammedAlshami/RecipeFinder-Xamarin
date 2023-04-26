@@ -143,16 +143,43 @@
             <StackLayout x:Name="HomeComponents">
 
 
-            <StackLayout Margin="25, 5, 25, 0">
-                <Label Text="Shorts" TextColor="Black" FontSize="28" Margin="0, 0, 0, 15"/>
+            <StackLayout Margin="25, 20, 25, 0">
                 <Frame  BackgroundColor="#E6AC8B"
                     HeightRequest="250" 
                     CornerRadius="15" 
                     HasShadow="True"
+                        Padding="7"
                     xct:ShadowEffect.Color="Black"
                     xct:ShadowEffect.Radius="10">
+                 
+                        <Grid>
+                            <Frame CornerRadius="15" Padding="0">
+                                <CarouselView x:Name="Carousel" IndicatorView="{x:Reference monkeysIndicator}">
 
-                </Frame>
+
+                                    <CarouselView.ItemTemplate>
+                                        <DataTemplate>
+
+                                            <Grid>
+
+                                                <Image                             Source="{Binding}"                      HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand" Aspect="AspectFill"/>
+
+
+                                            </Grid>
+                                        </DataTemplate>
+                                    </CarouselView.ItemTemplate>
+                                </CarouselView>
+
+                            </Frame>
+
+                            <IndicatorView x:Name="monkeysIndicator" IndicatorColor="LightGray" SelectedIndicatorColor="white" IndicatorsShape="Circle" Margin="0,0,0,20" VerticalOptions="End" HorizontalOptions="FillAndExpand"  />
+
+                        </Grid>
+              
+
+                    </Frame>
+                
             </StackLayout>
 
                 <StackLayout Margin="25">

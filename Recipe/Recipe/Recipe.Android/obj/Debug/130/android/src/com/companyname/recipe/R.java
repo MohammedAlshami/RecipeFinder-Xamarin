@@ -9923,18 +9923,19 @@ public final class R {
     public static final int notify_panel_notification_icon_bg=0x7f070095;
     public static final int preference_list_divider_material=0x7f070096;
     public static final int profile_arrow=0x7f070097;
-    public static final int profile_logout=0x7f070098;
-    public static final int profile_profile=0x7f070099;
-    public static final int profile_setting=0x7f07009a;
-    public static final int profile_upload=0x7f07009b;
-    public static final int step_add_blue=0x7f07009c;
-    public static final int step_remove_red=0x7f07009d;
-    public static final int test_custom_background=0x7f07009e;
-    public static final int tooltip_frame_dark=0x7f07009f;
-    public static final int tooltip_frame_light=0x7f0700a0;
-    public static final int upload_add=0x7f0700a1;
-    public static final int upload_remove=0x7f0700a2;
-    public static final int upload_upload=0x7f0700a3;
+    public static final int profile_edit=0x7f070098;
+    public static final int profile_logout=0x7f070099;
+    public static final int profile_profile=0x7f07009a;
+    public static final int profile_setting=0x7f07009b;
+    public static final int profile_upload=0x7f07009c;
+    public static final int step_add_blue=0x7f07009d;
+    public static final int step_remove_red=0x7f07009e;
+    public static final int test_custom_background=0x7f07009f;
+    public static final int tooltip_frame_dark=0x7f0700a0;
+    public static final int tooltip_frame_light=0x7f0700a1;
+    public static final int upload_add=0x7f0700a2;
+    public static final int upload_remove=0x7f0700a3;
+    public static final int upload_upload=0x7f0700a4;
   }
   public static final class id {
     public static final int ALT=0x7f080000;

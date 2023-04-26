@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Recipe.Views.Explore.ExplorePage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             BackgroundColor="black"
+             NavigationPage.HasNavigationBar="False"
+             >
+    <StackLayout>
+        <CarouselView x:Name="Carousel" >
+            <CarouselView.ItemsLayout>
+                <LinearItemsLayout Orientation="Vertical" />
+            </CarouselView.ItemsLayout>
+
+            <CarouselView.ItemTemplate>
+                <DataTemplate>
+
+                    <Grid>
+                        <xct:MediaElement
+                            Source="{Binding}"
+                            AutoPlay="True"
+                            HorizontalOptions="FillAndExpand"
+                            VerticalOptions="FillAndExpand"
+                            ShowsPlaybackControls="False"
+                            Aspect="AspectFill" 
+                            IsLooping="True"/>
+
+                        <StackLayout VerticalOptions="Center" HorizontalOptions="End" Margin="10" IsVisible="False">
+                            <Image Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Icons%2Fremove.png?alt=media" HeightRequest="30" HorizontalOptions="Center"/>
+                            <Label Text="Recipe"
+                               FontSize="Large"
+                               TextColor="White"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center"
+                               Margin="15"/>
+                        </StackLayout>
+
+                        <StackLayout WidthRequest="300" Background="black" Opacity=".5" HeightRequest="100" VerticalOptions="End" IsVisible="False">
+
+                        </StackLayout>
+
+                    </Grid>
+                </DataTemplate>
+            </CarouselView.ItemTemplate>
+        </CarouselView>
+    </StackLayout>
+</ContentPage>

@@ -15,6 +15,13 @@ namespace Recipe.Views
     {
 
         RecipeHandler recipehandler;
+        private int currentIndex = 0;
+        private List<string> images = new List<string>
+    {
+        "https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_nasi_goreng.jpg?alt=media",
+        "https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/UserImages%2FAI-dreams-cat-portraits-Drago-Malfoy.webp?alt=media",
+        "https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/UserImages%2FAI-dreams-cat-portraits-Drago-Malfoy.webp?alt=media"
+    };
         public HomePage()
         {
             InitializeComponent();
@@ -24,6 +31,23 @@ namespace Recipe.Views
        
 
                 
+        }
+
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            Carousel.ItemsSource = images;
+            Device.StartTimer(TimeSpan.FromSeconds(3), () =>
+            {
+                // Increment the current index and wrap around if necessary
+                currentIndex = (currentIndex + 1) % images.Count;
+
+                // Set the position of the carousel view to the current index
+                Carousel.Position = currentIndex;
+
+                return true;
+            });
         }
 
         private void ChangeFrameHeight(object sender, EventArgs e)
