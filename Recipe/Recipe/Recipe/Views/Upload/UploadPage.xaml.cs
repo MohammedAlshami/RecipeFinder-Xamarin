@@ -11,6 +11,7 @@ using Recipe.Models.Recipes;
 using System.IO;
 using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.Forms.PlatformConfiguration.TizenSpecific;
+using Recipe.Views.Profile;
 
 namespace Recipe.Views.Upload
 {
@@ -154,6 +155,19 @@ namespace Recipe.Views.Upload
                 Keywords = AddKeywordsToList()
             };
             recipeHandler.AddRecipe(recipe);
+        }
+        private async void backBtn(object sender, EventArgs e)
+        {
+            try
+            {
+                await Shell.Current.GoToAsync($"//{nameof(ProfilePage)}");
+            }
+            catch (Exception ex)
+            {
+                // Handle the exception here
+                Console.WriteLine($"Exception while navigating to BottomNavigation page: {ex.Message}");
+            }
+
         }
 
 

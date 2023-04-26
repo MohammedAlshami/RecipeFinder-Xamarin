@@ -62,12 +62,12 @@ namespace Recipe.Views
         private void DisplayStepsList(List<string> stepsList)
         {
             StepsListStackLayout.Children.Clear();
-
+            var count = 1;
             foreach (string step in stepsList)
             {
                 var label = new Label
                 {
-                    Text = step,
+                    Text = (count++) +" . " + step,
                     FontSize = 18,
                     Margin = new Thickness(10, 5),
                     Padding = new Thickness(10, 5),

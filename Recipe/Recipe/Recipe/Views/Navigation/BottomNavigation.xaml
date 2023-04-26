@@ -4,10 +4,21 @@
        xmlns:views1="clr-namespace:Recipe.Views.Upload"
        xmlns:views2="clr-namespace:Recipe.Views.Profile"
        xmlns:views3="clr-namespace:Recipe.Views.Camera"
+       xmlns:views4="clr-namespace:Recipe.Views.Authentication"
+
        x:Class="Recipe.Views.Navigation.BottomNavigation"
        Shell.NavBarIsVisible="False">
+    <FlyoutItem Title="Registration" Route="Registration">
+        <ShellContent 
+                     ContentTemplate="{DataTemplate views4:Registration}" 
+                      IsVisible="True"/>
+    </FlyoutItem>
+
     <TabBar>
+
+
         <ShellContent Title="Home"
+                      Route="HomePage"
                      Icon="nav_home"
                      ContentTemplate="{DataTemplate views:HomePage}" />
         <ShellContent Title="Camera"
@@ -15,7 +26,9 @@
                      ContentTemplate="{DataTemplate views3:CameraPage}" />
         <ShellContent Title="Profile"
                      Icon="nav_profile"
-                     ContentTemplate="{DataTemplate views2:ProfilePage}" />
+                      Route="ProfilePage"
+                     ContentTemplate="{DataTemplate views2:ProfilePage}" 
+                     />
 
-    </TabBar>
+</TabBar>
 </Shell>

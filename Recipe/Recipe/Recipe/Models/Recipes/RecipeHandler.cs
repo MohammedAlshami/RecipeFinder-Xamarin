@@ -63,7 +63,15 @@ namespace Recipe.Models.Recipes
 
             foreach (var recipe in recipes)
             {
-                Console.WriteLine(recipe.Object.Name);
+                Console.WriteLine($"Recipe name: {recipe.Object.Name}");
+                Console.WriteLine("Keywords:");
+                if (recipe.Object.Keywords != null)
+                {
+                    foreach (var keyword in recipe.Object.Keywords)
+                    {
+                        Console.Write(keyword + " ");
+                    }
+                }
             }
 
             var matchingRecipes = new List<Recipes>();
@@ -77,6 +85,7 @@ namespace Recipe.Models.Recipes
 
             return matchingRecipes;
         }
+
 
 
     }

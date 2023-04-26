@@ -2,7 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-
+             NavigationPage.HasNavigationBar="False"
+             Shell.FlyoutBehavior ="Disabled"
+             Shell.TabBarIsVisible="False"
              x:Class="Recipe.Views.Authentication.Registration">
     <ContentPage.Content>
         <Grid>
@@ -54,7 +56,7 @@
                         <Frame HasShadow="True" CornerRadius="20" Padding="15, 5, 0, 5" Margin="10"  xct:ShadowEffect.Color="Black"  xct:ShadowEffect.OffsetY="0" xct:ShadowEffect.Radius="5">
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="login_lock" WidthRequest="30"/>
-                                <Entry  Placeholder="**************************" PlaceholderColor="LightGray" TextColor="Black" x:Name="loginuserPassword"  Text=""/>
+                                <Entry  Placeholder="**************************" PlaceholderColor="LightGray" TextColor="Black" x:Name="loginuserPassword"  Text=""  IsPassword="True" />
                             </StackLayout>
                         </Frame>
                     </StackLayout>
@@ -70,13 +72,13 @@
                         <Frame HasShadow="True" CornerRadius="20" Padding="15, 5, 0, 5" Margin="10" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="0" xct:ShadowEffect.Radius="5">
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="login_lock" WidthRequest="30" />
-                                <Entry Placeholder="**************************" PlaceholderColor="LightGray" TextColor="Black" WidthRequest="220"  x:Name="signupuserPassword" Text=""/>
+                                <Entry Placeholder="**************************" PlaceholderColor="LightGray" TextColor="Black" WidthRequest="220"  x:Name="signupuserPassword" Text=""  IsPassword="True" />
                             </StackLayout>
                         </Frame>
                         <Frame HasShadow="True" CornerRadius="20" Padding="15, 5, 0, 5" Margin="10" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="0" xct:ShadowEffect.Radius="5">
                             <StackLayout Orientation="Horizontal">
                                 <Image Source="login_lock" WidthRequest="30" />
-                                <Entry Placeholder="Confirm Password" PlaceholderColor="LightGray" TextColor="Black" WidthRequest="220"  x:Name="userConfirmPassword"  Text=""/>
+                                <Entry Placeholder="Confirm Password" PlaceholderColor="LightGray" TextColor="Black" WidthRequest="220"  x:Name="userConfirmPassword"  Text=""  IsPassword="True" />
                             </StackLayout>
                         </Frame>
                     </StackLayout>

@@ -1,6 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                          NavigationPage.HasNavigationBar="False"
+
              x:Class="Recipe.Views.Profile.ProfilePage">
     <ContentPage.Content>
         <StackLayout>
@@ -18,8 +20,10 @@
             <StackLayout>
                 <Frame CornerRadius="100" HeightRequest="150" WidthRequest="150" Padding="0"  HorizontalOptions="Center" VerticalOptions="Center" HasShadow="True" BackgroundColor="LightGray" Opacity=".4">
                     <Grid>
-                        <Image x:Name="profile_picture"  Source="" Aspect="AspectFill" />
-                        <Image Source="nav_profile" HeightRequest="50" WidthRequest="50" VerticalOptions="Center" HorizontalOptions="Center" />
+                        <Image  x:Name="profile_picture" Source="" Aspect="AspectFill" />
+                        <Frame BackgroundColor="black" Opacity=".2"></Frame>
+
+                        <Image  Source="profile_edit" HeightRequest="50" WidthRequest="50" VerticalOptions="Center" HorizontalOptions="Center" />
                     </Grid>
                 </Frame>
 
@@ -51,7 +55,7 @@
                 <StackLayout Margin="0, 7, 0, 0">
                     <Label
              x:Name="followers"
-             Text="1.2m"
+             Text="0"
              FontAttributes="Bold"
              TextColor="black"
              FontSize="15"  
@@ -70,7 +74,7 @@
                 <StackLayout Margin="25, 7, 0, 0">
                     <Label
              x:Name="following"
-             Text="400"
+             Text="0"
              FontAttributes="Bold"
              TextColor="black"
              FontSize="15"  
@@ -89,7 +93,7 @@
                 <StackLayout Margin="25, 7, 0, 0">
                     <Label
              x:Name="posts"
-             Text="100"
+             Text="0"
              FontAttributes="Bold"
              TextColor="black"
              FontSize="15"  
@@ -108,7 +112,7 @@
                 <StackLayout Margin="25, 7, 0, 0">
                     <Label
              x:Name="recipes"
-             Text="33"
+             Text="0"
              FontAttributes="Bold"
              TextColor="black"
              FontSize="15"  

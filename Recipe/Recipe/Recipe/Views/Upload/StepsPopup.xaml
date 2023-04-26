@@ -3,6 +3,7 @@
              xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
+             NavigationPage.HasNavigationBar="False"
 
              IsLightDismissEnabled="false"
              x:Class="Recipe.Views.StepsPopup"

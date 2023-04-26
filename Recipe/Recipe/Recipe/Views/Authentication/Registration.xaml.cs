@@ -7,6 +7,8 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Firebase.Auth;
+using Recipe.Views.Upload;
+using Recipe.Views.Navigation;
 /*using Recipe.Views.Authentication;
 */
 namespace Recipe.Views.Authentication
@@ -15,10 +17,12 @@ namespace Recipe.Views.Authentication
     public partial class Registration : ContentPage
     {
         AuthenticationHelper authenticationHelper;
+        BottomNavigation _bottomNavigation;
         public Registration()
         {
             InitializeComponent();
             authenticationHelper = new AuthenticationHelper();
+            _bottomNavigation = new BottomNavigation();
         }
 
         private void OnSignInTapped(object sender, EventArgs e)
@@ -69,16 +73,37 @@ namespace Recipe.Views.Authentication
 
         private async void OnLoginButtonTapped(object sender, EventArgs e)
         {
-            // Handle login button tapped event
+            /*            ShellNavigationState state = Shell.Current.GoToAsync(new BottomNavigation());
+            */
+      
+
+            // Navigate to the BottomNavigation page using the Shell Navigation API
             Console.WriteLine("Sign button invoked");
 
-            string errorMessage = await authenticationHelper.SignInWithEmailPassword(loginuserEmail.Text, loginuserPassword.Text);
-            if (errorMessage != null)
+            bool errorMessage = await authenticationHelper.SignInWithEmailPassword(loginuserEmail.Text, loginuserPassword.Text);
+            if (errorMessage == false)
             {
-                await DisplayAlert("Error", errorMessage, "OK");
+                await DisplayAlert("Error", "Something went wrong", "OK");
+
+            }
+            else
+            {
+                Console.WriteLine("invoked_sign");
+                ((App)Application.Current).UserEmail = loginuserEmail.Text;
+                try
+                {
+                    await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
+                }
+                catch (Exception ex)
+                {
+                    // Handle the exception here
+                    Console.WriteLine($"Exception while navigating to BottomNavigation page: {ex.Message}");
+                }
+
             }
 
-            Console.WriteLine("invoked_sign");
+
+
         }
 
         private async void OnSignupButtonTapped(object sender, EventArgs e)
@@ -107,13 +132,20 @@ namespace Recipe.Views.Authentication
                 return;
             }
 
-            string errorMessage = await authenticationHelper.RegisterWithEmailPassword(signupuserEmail.Text, signupuserPassword.Text);
+            bool errorMessage = await authenticationHelper.RegisterWithEmailPassword(signupuserEmail.Text, signupuserPassword.Text);
 
-            if (errorMessage != null)
+     
+            if (errorMessage == false)
             {
-                await DisplayAlert("Error", errorMessage, "OK");
+                await DisplayAlert("Error", "Something went wrong", "OK");
+
+            }
+            else
+            {
                 signinConfig();
             }
+                
+            
 
             Console.WriteLine("invoked_sign");
         }

@@ -2,11 +2,18 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             
              x:Class="Recipe.Views.Upload.UploadPage">
     <ContentPage.Content>
         <ScrollView  HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
             <StackLayout>
-                <Label
+                <StackLayout Orientation="Horizontal">
+                    <ImageButton x:Name="SearchBackBtn" Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Icons%2Farrow_back_ios_FILL0_wght500_GRAD0_opsz48.png?alt=media" 
+                                 WidthRequest="30" BackgroundColor="Transparent"
+                                 Padding="0, 30, 0, 15" 
+                                 Margin="20, 0, 0, 0" 
+                                 Clicked="backBtn"/>
+                    <Label
              Text="Upload"
              FontAttributes="Bold"
              TextColor="Black"
@@ -15,6 +22,8 @@
              HorizontalTextAlignment="Center"
              VerticalTextAlignment="Center"
                 />
+                </StackLayout>
+                
                 <BoxView Color="#e6e6e5" HeightRequest="2" Margin="5, 0, 5, 0" HorizontalOptions="FillAndExpand" />
 
 

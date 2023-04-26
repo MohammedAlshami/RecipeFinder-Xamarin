@@ -6,17 +6,18 @@ using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Recipe.Views.Upload;
-
+using Recipe.Views.Navigation;
 namespace Recipe
 {
     public partial class App : Application
     {
+        public string UserEmail { get; set; }
         public App()
         {
             InitializeComponent();
+            UserEmail = null;
 
-            MainPage = new BottomNavigation();//Very important add this..
-
+            MainPage = new BottomNavigation();
         }
 
         protected override void OnStart()
