@@ -39,6 +39,7 @@ namespace Recipe.Views
             {
                 Recipe_Name.Text = recipe.Name;
                 thumbnail.Source = recipe.Image;
+                recipe_video.Source = recipe.Video;
                 DisplayStepsList(recipe.Steps);
                 List<Ingredient> ingredientList = await ingredients.GetIngredients(recipe.Ingredients);
                 foreach (var ingredient in ingredientList)

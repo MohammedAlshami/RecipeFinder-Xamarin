@@ -117,10 +117,10 @@ namespace Recipe.Views.Authentication
         {
             var dummyImageUrls = new List<string>
     {
-                "https://dummyimage.com/600x400/000/fff",
-                "https://dummyimage.com/600x400/00ff00/000",
-                "https://dummyimage.com/600x400/ff0000/fff",
-                "https://dummyimage.com/600x400/0000ff/fff"
+                "https://cdn.pixabay.com/photo/2023/01/10/22/48/ai-generated-7710624_1280.jpg",
+                "https://preview.redd.it/cat-goddess-created-with-mid-journey-ai-via-fb-v0-gvtghdnl62v91.jpg?auto=webp&s=0adbef30460151b2fc87052b2dee5aec8dede08c",
+                "https://img.freepik.com/premium-photo/white-cat-cupid-generative-ai_791958-8.jpg",
+                "https://images.nightcafe.studio/jobs/Ig2dtGM7kX2UZO4FwasE/Ig2dtGM7kX2UZO4FwasE--8--0KFBH_4x.jpg?tr=w-1600,c-at_max"
             };
 
             var random = new Random();

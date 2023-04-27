@@ -19,6 +19,14 @@
             <StackLayout>
                 <StackLayout Orientation="Horizontal">
 
+                    <ImageButton x:Name="Aboutmea" Source="me" 
+                                 WidthRequest="50" BackgroundColor="Transparent"
+                                 Padding="0, 0, 0, 0"
+                                 
+                                 Margin="20, 20, 0, 0" 
+                                 IsVisible="True"
+                                 Clicked="something"/>
+
                     <ImageButton x:Name="SearchBackBtn" Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Icons%2Farrow_back_ios_FILL0_wght500_GRAD0_opsz48.png?alt=media" 
                                  WidthRequest="30" BackgroundColor="Transparent"
                                  Padding="0, 30, 0, 15" 
@@ -27,7 +35,7 @@
                                  Clicked="backBtn"/>
 
   
-                    <Frame Padding="0" Margin="30, 20, 40, 0" CornerRadius="15" x:Name="homeSearchFrame"                  xct:ShadowEffect.Color="Black"
+                    <Frame Padding="0" Margin="10, 20, 60, 0" CornerRadius="15"  WidthRequest="280" x:Name="homeSearchFrame"                  xct:ShadowEffect.Color="Black"
                         xct:ShadowEffect.Radius="10">
                         <SearchBar x:Name="HomeSearchBar" Placeholder="Search ingredients" TextChanged="SearchRecipes" Focused="ChangeFrameHeight"/>
                     </Frame>

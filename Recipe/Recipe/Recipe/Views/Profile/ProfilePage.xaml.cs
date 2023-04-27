@@ -1,6 +1,7 @@
 ﻿using Firebase.Database;
 using Firebase.Database.Query;
 using Recipe.Models.User;
+using Recipe.Views.Authentication;
 using Recipe.Views.Upload;
 using System;
 using System.Collections.Generic;
@@ -63,9 +64,10 @@ namespace Recipe.Views.Profile
         }
 
 
-        private void LogoutFrame_Tapped(object sender, EventArgs e)
+        private async void LogoutFrame_Tapped(object sender, EventArgs e)
         {
             // Handle logout frame tapped
+            await Shell.Current.GoToAsync($"//{nameof(Registration)}");
         }
     }
 }

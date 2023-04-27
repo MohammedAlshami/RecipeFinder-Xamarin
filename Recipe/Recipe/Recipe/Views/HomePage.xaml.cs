@@ -1,10 +1,12 @@
-﻿using Recipe.Models.Recipes;
+﻿using Recipe.Models;
+using Recipe.Models.Recipes;
+using Recipe.Views;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.CommunityToolkit.Extensions;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -60,6 +62,7 @@ namespace Recipe.Views
         {
 
             SearchBackBtn.IsVisible = true;
+            Aboutmea.IsVisible = false;
             HomeSearchOption.IsVisible = true;
             homeSearchFrame.WidthRequest = 290;
             homeSearchFrame.Margin = new Thickness(0, 25, 25, 10);
@@ -71,9 +74,11 @@ namespace Recipe.Views
         {
 
             SearchBackBtn.IsVisible = false;
+            Aboutmea.IsVisible = true;
+
             HomeSearchOption.IsVisible = false;
-            homeSearchFrame.WidthRequest = 340;
-            homeSearchFrame.Margin = new Thickness(25, 25, 25, 10);
+            homeSearchFrame.WidthRequest = 280;
+            homeSearchFrame.Margin = new Thickness(10, 20, 60, 0);
             HomeComponents.IsVisible = true;
 
         }
@@ -157,6 +162,11 @@ namespace Recipe.Views
             /*string labelText = (Frame.BindingContext as string) ?? string.Empty;*/
         }
 
+        async void something(object sender, EventArgs e)
+        {
+            var result = await Navigation.ShowPopupAsync(new Me());
+          
+        }
 
 
 

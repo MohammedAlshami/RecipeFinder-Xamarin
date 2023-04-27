@@ -21,7 +21,7 @@
                       Route="HomePage"
                      Icon="nav_home"
                      ContentTemplate="{DataTemplate views:HomePage}" IsVisible="True"/>
-        <ShellContent Title="Explore"
+        <ShellContent Title="Upload"
                      Icon="upload_upload"
                      ContentTemplate="{DataTemplate views1:UploadPage}"/>
         <ShellContent Title="Profile"

@@ -45,7 +45,7 @@
                             <TapGestureRecognizer Tapped="OnVideoClicked"/>
                         </Frame.GestureRecognizers>
                         <Grid>
-                            <xct:MediaElement Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/DidYouSubscribe%2FToMyChannelYet%2Fsample.mp4?alt=media" WidthRequest="400" Aspect="AspectFill" Speed="1" ShowsPlaybackControls="False" AutoPlay="False" x:Name="recipe_video" />
+                            <xct:MediaElement Source="" WidthRequest="400" Aspect="AspectFill" Speed="1" ShowsPlaybackControls="False" AutoPlay="False" x:Name="recipe_video" />
                             <Image Source="" x:Name="thumbnail" Aspect="AspectFill"/>
                                 <Frame BackgroundColor="Black" Opacity=".7" x:Name="recipe_overlay" Padding="0" ></Frame>
                                 <Image Source="recipe_play" WidthRequest="40" HorizontalOptions="Center" x:Name="recipe_play"/>
