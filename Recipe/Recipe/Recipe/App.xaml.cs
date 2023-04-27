@@ -26,9 +26,8 @@ namespace Recipe
             InitializeComponent();
             UserEmail = null;
 
-            /*            MainPage = new SplashPage();
-            */
-            MainPage = new HomePage();
+            MainPage = new SplashPage();
+
         }
 
         protected override void OnStart()
@@ -48,7 +47,7 @@ namespace Recipe
 
         }
 
-        protected async void CreateIngredient()
+ /*       protected async void CreateIngredient()
         {
             List<Ingredient> ingredients = new List<Ingredient>
     {
@@ -644,7 +643,7 @@ CreateRecipe(
             // Perform any additional initialization or processing here if needed
 
             return recipe;
-        }
+        }*/
 
     }
 }

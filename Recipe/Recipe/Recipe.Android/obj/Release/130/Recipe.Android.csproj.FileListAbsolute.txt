@@ -525,3 +525,4 @@ C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Releas
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Release\130\stamp\_GenerateJavaStubs.stamp
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Release\130\stamp\_GeneratePackageManagerJava.stamp
 C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Release\130\stamp\_ResolveLibraryProjectImports.stamp
+C:\Users\Tazz\source\repos\Recipe_Finder\Recipe\Recipe\Recipe.Android\obj\Release\130\res\drawable\me.png

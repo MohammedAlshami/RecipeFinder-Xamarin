@@ -93,6 +93,7 @@ namespace Recipe.Views.Authentication
                 ((App)Application.Current).UserEmail = loginuserEmail.Text;
                 try
                 {
+                    signinConfig();
                     await Shell.Current.GoToAsync($"//{nameof(HomePage)}");
                 }
                 catch (Exception ex)

@@ -14,11 +14,15 @@ namespace Recipe.Models {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\Me.xaml")]
-    public partial class Me : global::Xamarin.Forms.ContentPage {
+    public partial class Me : global::Xamarin.CommunityToolkit.UI.Views.Popup {
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
+        private global::Xamarin.Forms.Image profile_picture;
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
             global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(Me));
+            profile_picture = global::Xamarin.Forms.NameScopeExtensions.FindByName<global::Xamarin.Forms.Image>(this, "profile_picture");
         }
     }
 }
