@@ -17,16 +17,17 @@
                                  WidthRequest="30" BackgroundColor="Transparent"
                                  Padding="0, 30, 0, 15" 
                                  Margin="20, 0, 0, 0" 
-                                 IsVisible="false"
                                  Clicked="backBtn"/>
 
 
-                        <Frame Padding="0" Margin="30, 20, 40, 0" CornerRadius="15" x:Name="homeSearchFrame"                  xct:ShadowEffect.Color="Black"
+                        <Frame Padding="0" Margin="0, 20, 0, 0" CornerRadius="15" x:Name="homeSearchFrame"                  xct:ShadowEffect.Color="Black"
                         xct:ShadowEffect.Radius="10">
-                            <SearchBar x:Name="HomeSearchBar" Placeholder="Search ingredients" TextChanged="SearchRecipes"/>
+                            <SearchBar x:Name="HomeSearchBar" Placeholder="Search ingredients" TextChanged="SearchRecipes" WidthRequest="300"/>
                         </Frame>
                     </StackLayout>
-                    <StackLayout x:Name="RecipeList" />
+                    <StackLayout x:Name="RecipeList" >
+                        <Label Text="No recipes found"  FontSize ="18" HorizontalOptions="CenterAndExpand"/>
+                    </StackLayout>
 
                 </StackLayout>
             </ScrollView>

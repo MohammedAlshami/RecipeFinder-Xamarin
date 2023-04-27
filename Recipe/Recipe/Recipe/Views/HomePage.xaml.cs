@@ -18,9 +18,15 @@ namespace Recipe.Views
         private int currentIndex = 0;
         private List<string> images = new List<string>
     {
-        "https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_nasi_goreng.jpg?alt=media",
-        "https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/UserImages%2FAI-dreams-cat-portraits-Drago-Malfoy.webp?alt=media",
-        "https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/UserImages%2FAI-dreams-cat-portraits-Drago-Malfoy.webp?alt=media"
+        "https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/DisplayImages%2FFood-Facts-1-800x800.png?alt=media&token=3e4b40ee-9521-4480-83f6-047da6bffa84",
+        "https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/DisplayImages%2FFood-Facts-2-800x800.png?alt=media&token=8992b558-2649-41d5-89e1-cd6ecefaca36",
+        "https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/DisplayImages%2FFood-Facts-3-800x800.png?alt=media&token=1cd416a9-8a7c-4c95-b07a-1cc54d2f8f9c",
+        "https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/DisplayImages%2FFood-Facts-4-800x800.png?alt=media&token=73dd18a6-4e75-47f2-9607-ca52b1211e70",
+        "https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/DisplayImages%2FFood-Facts-5-800x800.png?alt=media&token=61141606-5caa-46a5-b7e1-73b32ac3975d",
+        "https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/DisplayImages%2FFood-Facts-6-800x800.png?alt=media&token=2337171e-8a33-4d82-a068-c895daa33983",
+        "https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/DisplayImages%2FFood-Facts-7-800x800.png?alt=media&token=6dfb8e3d-f941-4ce3-8ade-7c4382759448",
+        "https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/DisplayImages%2FFood-Facts-Feature.png?alt=media&token=4136ca48-4de6-4211-a999-9e42269ca652"
+
     };
         public HomePage()
         {
@@ -38,7 +44,7 @@ namespace Recipe.Views
         {
             base.OnAppearing();
             Carousel.ItemsSource = images;
-            Device.StartTimer(TimeSpan.FromSeconds(3), () =>
+            Device.StartTimer(TimeSpan.FromSeconds(6), () =>
             {
                 // Increment the current index and wrap around if necessary
                 currentIndex = (currentIndex + 1) % images.Count;
@@ -124,6 +130,34 @@ namespace Recipe.Views
                 Navigation.PushAsync(new RecipeSearch(recipe));
             });
         }
+        private async void OnStackLayoutTapped(object sender, EventArgs e)
+        {
+            ImageButton button = (ImageButton)sender;
+            string parameter = button.CommandParameter as string;
+            Console.WriteLine($"HomeError: {parameter}");
+            var recipe = await recipehandler.GetRecipeByName(parameter);
+            await Device.InvokeOnMainThreadAsync(() =>
+            {
+                Navigation.PushAsync(new RecipePage(recipe));
+            });
+        }
+        private async void OnSearchOption(object sender, EventArgs e)
+        {
+            Frame lblClicked = (Frame)sender;
+            var item = (TapGestureRecognizer)lblClicked.GestureRecognizers[0];
+            var id = item.CommandParameter as string;
+            await MyFunctionAsync(id);
+            /*string labelText = (Frame.BindingContext as string) ?? string.Empty;*/
+        }
+        private async void OnSearchOptioncus(object sender, EventArgs e)
+        {
+            ImageButton button = (ImageButton)sender;
+            string parameter = button.CommandParameter as string;
+            await MyFunctionAsync(parameter);
+            /*string labelText = (Frame.BindingContext as string) ?? string.Empty;*/
+        }
+
+
 
 
 

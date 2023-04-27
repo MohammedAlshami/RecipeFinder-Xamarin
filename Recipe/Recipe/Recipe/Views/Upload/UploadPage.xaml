@@ -7,24 +7,28 @@
     <ContentPage.Content>
         <ScrollView  HorizontalScrollBarVisibility="Never" VerticalScrollBarVisibility="Never">
             <StackLayout>
-                <StackLayout Orientation="Horizontal">
-                    <ImageButton x:Name="SearchBackBtn" Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Icons%2Farrow_back_ios_FILL0_wght500_GRAD0_opsz48.png?alt=media" 
-                                 WidthRequest="30" BackgroundColor="Transparent"
-                                 Padding="0, 30, 0, 15" 
-                                 Margin="20, 0, 0, 0" 
-                                 Clicked="backBtn"/>
-                    <Label
-             Text="Upload"
-             FontAttributes="Bold"
-             TextColor="Black"
-             FontSize="23"  
-             Margin="10, 5, 0, 0"
-             HorizontalTextAlignment="Center"
-             VerticalTextAlignment="Center"
-                />
-                </StackLayout>
-                
-                <BoxView Color="#e6e6e5" HeightRequest="2" Margin="5, 0, 5, 0" HorizontalOptions="FillAndExpand" />
+
+                <Grid Margin="0,10,0,0">
+                    <Label x:Name="Recipe_Name" Text="Upload" FontSize="25" TextColor="Black" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"/>
+
+                    <ImageButton
+          
+                    Source="global_backbutton.svg"
+                    HorizontalOptions="Start"
+                    BackgroundColor="Transparent"
+                    VerticalOptions="CenterAndExpand"
+                    HeightRequest="30"
+                    WidthRequest="30"
+                    Margin="20, 0, 0, 0"
+                    Clicked="backBtn"
+                        x:Name="backbuttonlogo"
+                        IsVisible="False"
+                        />
+
+                </Grid>
+                <BoxView Color="#e6e6e6" HeightRequest="3" Margin="20, 10, 20, 0" HorizontalOptions="FillAndExpand" />
+
+
 
 
                 <Frame
@@ -39,7 +43,7 @@
                            BackgroundColor="Black"
                            Opacity=".4">
                         <StackLayout HorizontalOptions="Center">
-                            <Image Source="upload_upload" WidthRequest="150"/>
+                            <Image Source="upload_upload" WidthRequest="150" x:Name="videoIcon"/>
                             <Label 
                                 Text="Upload Your Video" 
                                 TextColor="White" 
@@ -86,7 +90,7 @@
                                     <Grid>
                                         <Image Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fupload%2Fingredients.jpg?alt=media" Aspect="AspectFill"/>
                                         <Frame BackgroundColor="Black" Opacity=".6"></Frame>
-                                        <Image Source="upload_add" WidthRequest="40" HorizontalOptions="Center"/>
+                                        <Image Source="upload_add" WidthRequest="40" HorizontalOptions="Center" x:Name="ingredientsIcon"/>
                                     </Grid>
                                 </Frame>
 
@@ -106,7 +110,7 @@
                                     <Grid>
                                         <Image Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fupload%2Fsteps.jpg?alt=media" Aspect="AspectFill"/>
                                         <Frame BackgroundColor="Black" Opacity=".6"></Frame>
-                                        <Image Source="upload_add" WidthRequest="40" HorizontalOptions="Center"/>
+                                        <Image Source="upload_add" WidthRequest="40" HorizontalOptions="Center" x:Name="stepIcon"/>
                                     </Grid>
                                 </Frame>
 
@@ -127,7 +131,7 @@
                                     <Grid>
                                         <Image x:Name="thumbnailImage" Source="" Aspect="AspectFill"/>
                                         <Frame BackgroundColor="Black" Opacity=".6"></Frame>
-                                        <Image Source="upload_add" WidthRequest="40" HorizontalOptions="Center"/>
+                                        <Image Source="upload_add" WidthRequest="40" HorizontalOptions="Center"  x:Name="thumbnaiIcon"/>
                                     </Grid>
                                 </Frame>
 

@@ -10,19 +10,24 @@
 
             <!--Title and back button-->
 
-            <StackLayout Orientation="Horizontal" Padding="10">
+            <Grid Margin="0,10,0,0">
+                <Label x:Name="Recipe_Name" Text="Recipe" FontSize="25" TextColor="Black" HorizontalTextAlignment="Center" HorizontalOptions="CenterAndExpand"/>
+
                 <ImageButton
           
                     Source="global_backbutton.svg"
                     HorizontalOptions="Start"
                     BackgroundColor="Transparent"
                     VerticalOptions="CenterAndExpand"
-                    HeightRequest="25"
-                    WidthRequest="25"
-                    Margin="10, 0, 0, 0"/>
+                    HeightRequest="30"
+                    WidthRequest="30"
+                    Margin="20, 0, 0, 0"
+                    Clicked="backbtn"/>
 
-                <Label x:Name="Recipe_Name" Text=""  HorizontalOptions="CenterAndExpand" Padding="0, 0, 0, 0" VerticalOptions="CenterAndExpand" FontSize="30"/>
-            </StackLayout>
+            </Grid>
+            <BoxView Color="#e6e6e6" HeightRequest="3" Margin="20, 10, 20, 0" HorizontalOptions="FillAndExpand" />
+
+
 
 
             <!--<Frame BackgroundColor= "#e6ac8b" Padding="30" Margin="10" HeightRequest="300" HasShadow="True">
@@ -34,7 +39,24 @@
             <Grid>
                 <Frame Background="#e6ac8b" WidthRequest="300" HeightRequest="180" Padding="10" Margin="20" CornerRadius="20"
                         HasShadow="True" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="0" xct:ShadowEffect.Radius="10">
-                    <xct:MediaElement Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/DidYouSubscribe%2FToMyChannelYet%2Fsample.mp4?alt=media" WidthRequest="250"/>
+
+                        <Frame Padding="0" CornerRadius="20">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="OnVideoClicked"/>
+                        </Frame.GestureRecognizers>
+                        <Grid>
+                            <xct:MediaElement Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/DidYouSubscribe%2FToMyChannelYet%2Fsample.mp4?alt=media" WidthRequest="400" Aspect="AspectFill" Speed="1" ShowsPlaybackControls="False" AutoPlay="False" x:Name="recipe_video" />
+                            <Image Source="" x:Name="thumbnail" Aspect="AspectFill"/>
+                                <Frame BackgroundColor="Black" Opacity=".7" x:Name="recipe_overlay" Padding="0" ></Frame>
+                                <Image Source="recipe_play" WidthRequest="40" HorizontalOptions="Center" x:Name="recipe_play"/>
+                                <Image Source="recipe_pause" WidthRequest="40" HorizontalOptions="Center" IsVisible="false" x:Name="recipe_pause"/>
+                            </Grid>
+
+                        </Frame>
+             
+
+           
+
                 </Frame>
 
             </Grid>
@@ -50,11 +72,11 @@
                     </StackLayout>
                 </ScrollView>
             </StackLayout>
-            <BoxView Color="#e6e6e6" HeightRequest="3" Margin="8, 0, 8, 0" HorizontalOptions="FillAndExpand" />
+            <BoxView Color="#e6e6e6" HeightRequest="3" Margin="20, -30, 20, 0" HorizontalOptions="FillAndExpand" />
 
             <StackLayout>
                 <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="FillAndExpand" Margin="20, 10, 0, 0">
-                    <Label Text="Steps"  FontSize="25"/>
+                    <Label Text="Ingredients"  FontSize="25" TextColor="#000000"/>
                 </StackLayout>
                 <StackLayout x:Name="StepsListStackLayout" />
             </StackLayout>

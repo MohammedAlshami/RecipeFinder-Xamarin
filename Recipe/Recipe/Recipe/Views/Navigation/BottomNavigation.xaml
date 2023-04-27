@@ -11,7 +11,7 @@
     <FlyoutItem Title="Registration" Route="Registration">
         <ShellContent 
                      ContentTemplate="{DataTemplate views4:Registration}" 
-                      IsVisible="False"/>
+                      IsVisible="True"/>
     </FlyoutItem>
 
     <TabBar>
@@ -20,10 +20,10 @@
         <ShellContent Title="Home"
                       Route="HomePage"
                      Icon="nav_home"
-                     ContentTemplate="{DataTemplate views:HomePage}" IsVisible="False"/>
+                     ContentTemplate="{DataTemplate views:HomePage}" IsVisible="True"/>
         <ShellContent Title="Explore"
-                     Icon="nav_search"
-                     ContentTemplate="{DataTemplate views3:ExplorePage}" />
+                     Icon="upload_upload"
+                     ContentTemplate="{DataTemplate views1:UploadPage}"/>
         <ShellContent Title="Profile"
                      Icon="nav_profile"
                       Route="ProfilePage"

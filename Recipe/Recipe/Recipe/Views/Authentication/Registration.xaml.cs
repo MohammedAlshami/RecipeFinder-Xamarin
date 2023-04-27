@@ -83,8 +83,9 @@ namespace Recipe.Views.Authentication
             bool errorMessage = await authenticationHelper.SignInWithEmailPassword(loginuserEmail.Text, loginuserPassword.Text);
             if (errorMessage == false)
             {
-                await DisplayAlert("Error", "Something went wrong", "OK");
-
+                await DisplayAlert("Error", "Wrong Email or Password. Try Again!!", "OK");
+                loginuserEmail.Text = "";
+                loginuserPassword.Text = "";
             }
             else
             {
@@ -111,33 +112,50 @@ namespace Recipe.Views.Authentication
             // Handle login button tapped event
             Console.WriteLine("Sign up button invoked");
 
-            // Check password length
-            if (signupuserPassword.Text.Length < 6)
-            {
-                await DisplayAlert("Error", "Password must be at least 6 characters long", "OK");
-                return;
-            }
+
 
             // Check email format
             if (!IsValidEmail(signupuserEmail.Text))
             {
                 await DisplayAlert("Error", "Invalid email address", "OK");
+                signupuserEmail.Text = "";
+                signupuserPassword.Text = "";
+                userConfirmPassword.Text = "";
                 return;
+            } else
+            {
+                // Check password length
+                if (signupuserPassword.Text.Length < 6)
+                {
+                    await DisplayAlert("Error", "Password must be at least 6 characters long", "OK");
+                    signupuserPassword.Text = "";
+                    userConfirmPassword.Text = "";
+                    return;
+                } else
+                {
+                    // Check password match
+                    if (signupuserPassword.Text != userConfirmPassword.Text)
+                    {
+                        await DisplayAlert("Error", "Passwords do not match", "OK");
+                        userConfirmPassword.Text = "";
+
+                        return;
+                    }
+                }
+
+
             }
 
-            // Check password match
-            if (signupuserPassword.Text != userConfirmPassword.Text)
-            {
-                await DisplayAlert("Error", "Passwords do not match", "OK");
-                return;
-            }
+      
+       
+
 
             bool errorMessage = await authenticationHelper.RegisterWithEmailPassword(signupuserEmail.Text, signupuserPassword.Text);
 
      
             if (errorMessage == false)
             {
-                await DisplayAlert("Error", "Something went wrong", "OK");
+                await DisplayAlert("Error", "Email Already Exist. Try another email!!", "OK");
 
             }
             else

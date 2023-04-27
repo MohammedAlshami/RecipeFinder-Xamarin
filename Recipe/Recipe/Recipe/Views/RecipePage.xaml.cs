@@ -29,6 +29,7 @@ namespace Recipe.Views
         {
 
             base.OnAppearing();
+            recipe_video.Stop();
             Find_Recipe(null, null);
 
         }
@@ -37,18 +38,28 @@ namespace Recipe.Views
             if (recipe != null)
             {
                 Recipe_Name.Text = recipe.Name;
+                thumbnail.Source = recipe.Image;
                 DisplayStepsList(recipe.Steps);
                 List<Ingredient> ingredientList = await ingredients.GetIngredients(recipe.Ingredients);
                 foreach (var ingredient in ingredientList)
                 {
-                    var image = new Image { Source = ImageSource.FromUri(new Uri(ingredient.Image)), WidthRequest = 140, HeightRequest = 120, Aspect = Aspect.AspectFill };
+                    var image = new Image { Source = ImageSource.FromUri(new Uri(ingredient.Image)), WidthRequest = 110, HeightRequest = 90, Aspect = Aspect.AspectFill };
+
+                    var frame = new Frame
+                    {
+                        CornerRadius = 15,
+                        HasShadow = true,
+                        Padding = new Thickness(0, 0, 0, 0),
+                        Margin = new Thickness(5),
+                        Content = image
+
+                    };
                     var label = new Label { Text = ingredient.Name, HorizontalOptions = LayoutOptions.Center };
                     var ingredientLayout = new StackLayout { Orientation = StackOrientation.Vertical };
-                    ingredientLayout.Children.Add(image);
+                    ingredientLayout.Children.Add(frame);
                     ingredientLayout.Children.Add(label);
                     IngredientsLayout.Children.Add(ingredientLayout);
                 }
-                await DisplayAlert("Success", "Recipe Retrive Successfully", "OK");
 
             }
             else
@@ -96,6 +107,36 @@ namespace Recipe.Views
 
                 StepsListStackLayout.Children.Add(frame);
             }
+        }
+        private async void backbtn(object sender, EventArgs e)
+        {
+            await Device.InvokeOnMainThreadAsync(() =>
+            {
+                Navigation.PushAsync(new HomePage());
+            });
+
+        }
+        private int clicked = 0;
+        private async void OnVideoClicked(object sender, EventArgs e)
+        {
+            if (clicked == 0)
+            {
+                recipe_overlay.IsVisible = false;
+                recipe_play.IsVisible = false;
+                thumbnail.IsVisible = false;
+                clicked = 1;
+                recipe_video.Play();
+            }
+            else
+            {
+                recipe_overlay.IsVisible = true;
+                recipe_play.IsVisible = true;
+                clicked = 0;
+                recipe_video.Pause();
+
+            }
+
+
         }
     }
 }

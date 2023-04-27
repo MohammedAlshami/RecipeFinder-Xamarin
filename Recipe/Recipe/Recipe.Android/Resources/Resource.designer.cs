@@ -22497,28 +22497,37 @@ namespace Recipe.Droid
 			public const int profile_upload = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int step_add_blue = 2131165341;
+			public const int recipe_pause = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int step_remove_red = 2131165342;
+			public const int recipe_play = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int test_custom_background = 2131165343;
+			public const int step_add_blue = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int tooltip_frame_dark = 2131165344;
+			public const int step_remove_red = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int tooltip_frame_light = 2131165345;
+			public const int test_custom_background = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int upload_add = 2131165346;
+			public const int tooltip_frame_dark = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int upload_remove = 2131165347;
+			public const int tooltip_frame_light = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int upload_upload = 2131165348;
+			public const int upload_add = 2131165348;
+			
+			// aapt resource value: 0x7F0700A5
+			public const int upload_edit = 2131165349;
+			
+			// aapt resource value: 0x7F0700A6
+			public const int upload_remove = 2131165350;
+			
+			// aapt resource value: 0x7F0700A7
+			public const int upload_upload = 2131165351;
 			
 			static Drawable()
 			{

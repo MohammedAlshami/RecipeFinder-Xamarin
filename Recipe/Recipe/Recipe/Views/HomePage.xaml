@@ -45,38 +45,68 @@
                     <StackLayout Orientation="Horizontal">
                         <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
                             <Label Text="chicken" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSearchOption" CommandParameter="chicken" />
+                            </Frame.GestureRecognizers>
                         </Frame>
                         <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
                             <Label Text="laksa" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSearchOption" CommandParameter="laksa" />
+                            </Frame.GestureRecognizers>
                         </Frame>
                         <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
                             <Label Text="burger" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSearchOption" CommandParameter="burger" />
+                            </Frame.GestureRecognizers>
                         </Frame>
                         <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
                             <Label Text="nasi ayam" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSearchOption" CommandParameter="nasi ayam" />
+                            </Frame.GestureRecognizers>
                         </Frame>
                     </StackLayout>
                     <StackLayout Orientation="Horizontal">
                         <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
                             <Label Text="nasi lemak" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSearchOption" CommandParameter="nasi lemak" />
+                            </Frame.GestureRecognizers>
                         </Frame>
                         <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
                             <Label Text="ayam penyet" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSearchOption" CommandParameter="ayam penyet" />
+                            </Frame.GestureRecognizers>
                         </Frame>
                         <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
                             <Label Text="nasi" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSearchOption" CommandParameter="nasi" />
+                            </Frame.GestureRecognizers>
                         </Frame>
                         <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
                             <Label Text="diaksa" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSearchOption" CommandParameter="diaksa" />
+                            </Frame.GestureRecognizers>
                         </Frame>
                     </StackLayout>
 
                     <StackLayout Orientation="Horizontal">
                         <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
                             <Label Text="nasi goreng" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSearchOption" CommandParameter="nasi goreng" />
+                            </Frame.GestureRecognizers>
                         </Frame>
                         <Frame BorderColor="LightSlateGray" CornerRadius="15" Padding="13" Margin="5, 0,0, 5">
                             <Label Text="d laksa" TextColor="Black" FontAttributes="Bold" FontSize="12"/>
+                            <Frame.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnSearchOption" CommandParameter="d laksa" />
+                            </Frame.GestureRecognizers>
                         </Frame>
 
                     </StackLayout>
@@ -84,21 +114,24 @@
                     <StackLayout Orientation="Horizontal">
                         <StackLayout Margin="0, 0, 0, 0">
                             <Frame Padding="0" CornerRadius="15" HeightRequest="85" WidthRequest="110" HasShadow="True">
-                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fsearch%2Fmalay.webp?alt=media" Aspect="AspectFill"/>
+                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fsearch%2Fmalay.webp?alt=media" Aspect="AspectFill" Clicked="OnSearchOptioncus" CommandParameter="Thai"/>
+                                
                             </Frame>
                             <Label Text="Thai" TextColor="Black" FontSize="19" HorizontalOptions="CenterAndExpand"/>
 
                         </StackLayout>
                         <StackLayout Margin="10, 0, 0, 0">
                             <Frame Padding="0" CornerRadius="15" HeightRequest="85" WidthRequest="110" HasShadow="True">
-                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fsearch%2Fmalay.webp?alt=media" Aspect="AspectFill"/>
+                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fsearch%2Fmalay.webp?alt=media" Aspect="AspectFill"  Clicked="OnSearchOptioncus" CommandParameter="Malay"/>
+                                
                             </Frame>
                             <Label Text="Malay" TextColor="Black" FontSize="19" HorizontalOptions="CenterAndExpand"/>
 
                         </StackLayout>
                         <StackLayout Margin="10, 0, 0, 0">
                             <Frame Padding="0" CornerRadius="15" HeightRequest="85" WidthRequest="110" HasShadow="True">
-                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fsearch%2Fmiddle.webp?alt=media" Aspect="AspectFill"/>
+                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fsearch%2Fmiddle.webp?alt=media" Aspect="AspectFill"  Clicked="OnSearchOptioncus" CommandParameter="Middle Eastern"/>
+                                
                             </Frame>
                             <Label Text="Middle East" TextColor="Black" FontSize="19" HorizontalOptions="CenterAndExpand"/>
 
@@ -109,21 +142,24 @@
                     <StackLayout Orientation="Horizontal" Margin="0, 20, 0, 0">
                         <StackLayout Margin="0, 0, 0, 0">
                             <Frame Padding="0" CornerRadius="15" HeightRequest="85" WidthRequest="110" HasShadow="True">
-                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fsearch%2Fwestern.jpg?alt=media" Aspect="AspectFill"/>
+                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fsearch%2Fwestern.jpg?alt=media" Aspect="AspectFill"  Clicked="OnSearchOptioncus" CommandParameter="Western"/>
+                                
                             </Frame>
                             <Label Text="Western" TextColor="Black" FontSize="19" HorizontalOptions="CenterAndExpand"/>
 
                         </StackLayout>
                         <StackLayout Margin="10, 0, 0, 0">
                             <Frame Padding="0" CornerRadius="15" HeightRequest="85" WidthRequest="110" HasShadow="True">
-                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fsearch%2Fchinese.jpg?alt=media" Aspect="AspectFill"/>
+                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fsearch%2Fchinese.jpg?alt=media" Aspect="AspectFill"  Clicked="OnSearchOptioncus" CommandParameter="Chinese"/>
+                                
                             </Frame>
                             <Label Text="Chinese" TextColor="Black" FontSize="19" HorizontalOptions="CenterAndExpand"/>
 
                         </StackLayout>
                         <StackLayout Margin="10, 0, 0, 0">
                             <Frame Padding="0" CornerRadius="15" HeightRequest="85" WidthRequest="110" HasShadow="True">
-                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fsearch%2FKorean.jpg?alt=media" Aspect="AspectFill"/>
+                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fsearch%2FKorean.jpg?alt=media" Aspect="AspectFill"  Clicked="OnSearchOptioncus" CommandParameter="Korean"/>
+                                
                             </Frame>
                             <Label Text="Korean" TextColor="Black" FontSize="19" HorizontalOptions="CenterAndExpand"/>
 
@@ -173,7 +209,7 @@
 
                             </Frame>
 
-                            <IndicatorView x:Name="monkeysIndicator" IndicatorColor="LightGray" SelectedIndicatorColor="white" IndicatorsShape="Circle" Margin="0,0,0,20" VerticalOptions="End" HorizontalOptions="FillAndExpand"  />
+                            <IndicatorView x:Name="monkeysIndicator" IndicatorColor="LightGray" SelectedIndicatorColor="Black" IndicatorsShape="Circle" Margin="0,0,0,20" VerticalOptions="End" HorizontalOptions="FillAndExpand"  />
 
                         </Grid>
               
@@ -185,9 +221,10 @@
                 <StackLayout Margin="25">
             <Label Text="Top Recipe" TextColor="Black" FontSize="28" Margin="0, 0, 0, 15"/>
             <StackLayout Orientation="Horizontal">
+                
                 <StackLayout>
                     <Frame Padding="0" CornerRadius="15" HeightRequest="100" HasShadow="True">
-                        <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_salta.png?alt=media" Aspect="AspectFill"/>
+                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_salta.png?alt=media" Aspect="AspectFill" Clicked="OnStackLayoutTapped" CommandParameter="Salta"/>
                     </Frame>
                     <Label Text="Salta by" TextColor="Black" FontSize="18" HorizontalOptions="CenterAndExpand"/>
                     <Label Text="@Ramzy" TextColor="#4287B0" FontSize="18" Margin="-10" HorizontalOptions="CenterAndExpand"/>
@@ -195,16 +232,15 @@
                 </StackLayout>
                 <StackLayout Margin="10, 0, 0, 0">
                     <Frame Padding="0" CornerRadius="15" HeightRequest="100" HasShadow="True">
-                        <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_meetloaf.png?alt=media" Aspect="AspectFill"/>
+                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_meetloaf.png?alt=media" Aspect="AspectFill" Clicked="OnStackLayoutTapped" CommandParameter="Meatloaf"/>
                     </Frame>
                     <Label Text="Meatloaf by" TextColor="Black" FontSize="18" HorizontalOptions="CenterAndExpand"/>
-                    <Label Text="@Shaima" TextColor="#4287B0" FontSize="18" Margin="-10" HorizontalOptions="CenterAndExpand"/>
-
-                </StackLayout>
+                            <Label Text="@Shaima" TextColor="#4287B0" FontSize="18" Margin="-10" HorizontalOptions="CenterAndExpand"/>
+                        </StackLayout>
                 <StackLayout Margin="10, 0, 0, 0">
                     <Frame Padding="0" CornerRadius="15" HeightRequest="100" HasShadow="True">
-                        <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_lasagna.png?alt=media" Aspect="AspectFill"/>
-                    </Frame>
+                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_lasagna.png?alt=media" Aspect="AspectFill" Clicked="OnStackLayoutTapped" CommandParameter="Lasagna"/>
+                            </Frame>
                     <Label Text="Lasagna by" TextColor="Black" FontSize="18" HorizontalOptions="CenterAndExpand"/>
                     <Label Text="@Daniel" TextColor="#4287B0" FontSize="18" Margin="-10" HorizontalOptions="CenterAndExpand"/>
 
@@ -221,27 +257,36 @@
                         <Image Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_mosque.png?alt=media" WidthRequest="50" VerticalOptions="CenterAndExpand"/>
                         <Label Text="Hari Raya" TextColor="Black" FontSize="28" VerticalOptions="CenterAndExpand"/>
                         <Image Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_raya.png?alt=media" WidthRequest="50" VerticalOptions="CenterAndExpand"/>
+
                     </StackLayout>
 
 
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0, 0, 0, 20">
-                        <StackLayout Margin="0, 0, 0, 0">
-                            <Frame Padding="0" CornerRadius="15" HeightRequest="110" WidthRequest="110" HasShadow="True">
-                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_nasi_goreng.jpg?alt=media" Aspect="AspectFill"/>
-                            </Frame>
-                            <Label Text="Nasi Goreng" TextColor="Black" FontSize="18" HorizontalOptions="CenterAndExpand"/>
+                            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Margin="0, 0, 0, 20">
+                                <StackLayout Margin="0, 0, 0, 0">
+                                    <Frame Padding="0" CornerRadius="15" HeightRequest="110" WidthRequest="110" HasShadow="True">
+                                        <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_nasi_goreng.jpg?alt=media" Aspect="AspectFill"  Clicked="OnStackLayoutTapped" CommandParameter="Nasi Goreng"/>
+                                    </Frame>
+                                    <Label Text="Nasi Goreng" TextColor="Black" FontSize="18" HorizontalOptions="CenterAndExpand"/>
+
+
+
+                                </StackLayout>
+                                
+                                <StackLayout Margin="50, 0, 0, 0">
+                                    <StackLayout.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="OnStackLayoutTapped" CommandParameter="Apam Balik"/>
+                                    </StackLayout.GestureRecognizers>
+                                    <Frame Padding="0" CornerRadius="15" HeightRequest="110" WidthRequest="110" HasShadow="True">
+                                        <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_apam.jpg?alt=media" Aspect="AspectFill" Clicked="OnStackLayoutTapped" CommandParameter="Apam Balik"/>
+                                    </Frame>
+                                    <Label Text="Apam Balik" TextColor="Black" FontSize="18" HorizontalOptions="CenterAndExpand"/>
+     
+                                </StackLayout>
+                            </StackLayout>
+
+
+
                         </StackLayout>
-                        <StackLayout Margin="50, 0, 0, 0">
-                            <Frame Padding="0" CornerRadius="15" HeightRequest="110" WidthRequest="110" HasShadow="True">
-                                <ImageButton Source="https://firebasestorage.googleapis.com/v0/b/realtimedatabasetest-f226a.appspot.com/o/Resources%2Fhome_apam.jpg?alt=media" Aspect="AspectFill"/>
-                            </Frame>
-                            <Label Text="Apam Balik" TextColor="Black" FontSize="18" HorizontalOptions="CenterAndExpand"/>
-                        </StackLayout>
-                      
-                    </StackLayout>
-                    
-                    
-                </StackLayout>
 
             </Frame>
 

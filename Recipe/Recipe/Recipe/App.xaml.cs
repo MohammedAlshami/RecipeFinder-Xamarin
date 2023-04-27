@@ -7,6 +7,8 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Recipe.Views.Upload;
 using Recipe.Views.Navigation;
+using Xamarin.Forms.PlatformConfiguration;
+
 namespace Recipe
 {
     public partial class App : Application
@@ -17,7 +19,8 @@ namespace Recipe
             InitializeComponent();
             UserEmail = null;
 
-            MainPage = new BottomNavigation();
+            MainPage = new SplashPage();
+
         }
 
         protected override void OnStart()

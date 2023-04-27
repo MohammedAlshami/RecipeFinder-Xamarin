@@ -20,7 +20,7 @@ namespace Recipe.Views.Profile
         public ProfilePage()
         {
             InitializeComponent();
-            upload= new UploadPage();
+            upload= new UploadPage("1");
             SetUserInfo();
 
         }

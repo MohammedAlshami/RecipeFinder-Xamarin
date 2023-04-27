@@ -53,6 +53,31 @@ namespace Recipe.Models.Recipes
             var allRecipes = await GetAllRecipes();
             return allRecipes.Where(a => a.RecipeId == recipeId).FirstOrDefault();
         }
+        public async Task<Recipes> GetRecipeByName(string name)
+        {
+            var recipe = (await firebase
+                .Child("Recipe")
+                .OrderBy("Name")
+                .EqualTo(name)
+                .OnceAsync<Recipes>())
+                .FirstOrDefault();
+
+            if (recipe != null)
+            {
+                return new Recipes
+                {
+                    RecipeId = recipe.Object.RecipeId,
+                    Name = recipe.Object.Name,
+                    Ingredients = recipe.Object.Ingredients,
+                    Image = recipe.Object.Image,
+                    Video = recipe.Object.Video,
+                    Steps = recipe.Object.Steps,
+                    Description = recipe.Object.Description
+                };
+            }
+
+            return null;
+        }
 
 
         public async Task<List<Recipes>> GetRecipes(string searchQuery)

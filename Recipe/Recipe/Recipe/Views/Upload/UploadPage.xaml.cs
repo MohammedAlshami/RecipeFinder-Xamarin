@@ -34,13 +34,28 @@ namespace Recipe.Views.Upload
         // initializing popups first to make the app faster
         private UploadIngredients _ingredientPopup;
 
-        public UploadPage ()
+        public UploadPage (string yes="0")
 		{
 			InitializeComponent ();
+            if (yes == "1") {
+                backbuttonlogo.IsVisible = true;
+            }
             _ingredientPopup = new UploadIngredients(_selectedIngredients);
 
             stepsList = new List<string> ();
            loadedIngredients = new Dictionary<string, Dictionary<string, object>>();
+
+
+
+        }
+        public UploadPage()
+        {
+            InitializeComponent();
+
+            _ingredientPopup = new UploadIngredients(_selectedIngredients);
+
+            stepsList = new List<string>();
+            loadedIngredients = new Dictionary<string, Dictionary<string, object>>();
 
         }
         private async void AddIngredients(object sender, EventArgs e)
@@ -53,6 +68,16 @@ namespace Recipe.Views.Upload
         {
             var result = await Navigation.ShowPopupAsync(new StepsPopup(stepsList));
             stepsList = (List<string>)result;
+            if (stepsList != null && stepsList.Count >0)
+            {
+                stepIcon.Source = "upload_edit";
+
+            }
+            else if (stepsList.Count == 0)
+            {
+                stepIcon.Source = "upload_add";
+
+            }
         }
         async void UploadThumbnail(System.Object sender, System.EventArgs e)
         {
@@ -77,7 +102,10 @@ namespace Recipe.Views.Upload
 
 
             thumbnail = await task;
+
             thumbnailImage.Source = thumbnail;
+            thumbnaiIcon.Source = "upload_edit";
+
         }
 
         async void GetIngredient(object sender, EventArgs e)
@@ -86,6 +114,14 @@ namespace Recipe.Views.Upload
             if (result != null)
             {
                 _selectedIngredients = result as List<string>;
+             
+             
+            }
+
+            if (_selectedIngredients != null && _selectedIngredients.Count > 0)
+            {
+                ingredientsIcon.Source = "upload_edit";
+
             }
         }
         async void Upload_Video(System.Object sender, System.EventArgs e)
@@ -119,7 +155,7 @@ namespace Recipe.Views.Upload
             }
 
             videolink = await task;
-            await DisplayAlert("Video Link", videolink, "OK");
+            videoIcon.Source = "upload_edit";
             uploadProgressBar.Progress = 100;
 
         }
@@ -145,16 +181,20 @@ namespace Recipe.Views.Upload
             // do checking
 
             // upload
-            var recipe = new Recipes
+            if (AreFieldsValid())
             {
-                Name = recipeTitle.Text,
-                Ingredients = _selectedIngredients,
-                Image = thumbnail,
-                Video = videolink,
-                Steps = stepsList,
-                Keywords = AddKeywordsToList()
-            };
-            recipeHandler.AddRecipe(recipe);
+                var recipe = new Recipes
+                {
+                    Name = recipeTitle.Text,
+                    Ingredients = _selectedIngredients,
+                    Image = thumbnail,
+                    Video = videolink,
+                    Steps = stepsList,
+                    Keywords = AddKeywordsToList()
+                };
+                recipeHandler.AddRecipe(recipe);
+            }
+            
         }
         private async void backBtn(object sender, EventArgs e)
         {
@@ -170,6 +210,60 @@ namespace Recipe.Views.Upload
 
         }
 
+        private bool AreFieldsValid()
+        {
+            
+      
+
+            if (string.IsNullOrEmpty(videolink))
+            {
+                DisplayAlert("Error", "Please add the video.", "OK");
+                return false;
+            }else
+            {
+                if (stepsList == null || stepsList.Count < 2)
+                {
+                    DisplayAlert("Error", "Please add at least 2 steps to the list.", "OK");
+                    return false;
+                }else
+                {
+                    if (_selectedIngredients == null || _selectedIngredients.Count < 2)
+                    {
+                        DisplayAlert("Error", "Please add at least 2 ingredients to the list.", "OK");
+                        return false;
+                    }else
+                    {
+                        if (string.IsNullOrEmpty(thumbnail))
+                        {
+                            DisplayAlert("Error", "Please add the thumbnail.", "OK");
+                            return false;
+                        }else
+                        {
+                            if (string.IsNullOrEmpty(recipeTitle.Text))
+                            {
+                                DisplayAlert("Error", "Please enter a recipe title.", "OK");
+                                return false;
+                            }else
+                            {
+                                if (string.IsNullOrEmpty(keywords.Text))
+                                {
+                                    DisplayAlert("Error", "Please enter some keywords.", "OK");
+                                    return false;
+                                }
+                            }
+
+                        }
+                    }
+
+                }
+            }
+            
+            
+
+            // Check if other fields are not null or empty as well
+
+            return true;
+        }
 
 
     }

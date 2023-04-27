@@ -9928,14 +9928,17 @@ public final class R {
     public static final int profile_profile=0x7f07009a;
     public static final int profile_setting=0x7f07009b;
     public static final int profile_upload=0x7f07009c;
-    public static final int step_add_blue=0x7f07009d;
-    public static final int step_remove_red=0x7f07009e;
-    public static final int test_custom_background=0x7f07009f;
-    public static final int tooltip_frame_dark=0x7f0700a0;
-    public static final int tooltip_frame_light=0x7f0700a1;
-    public static final int upload_add=0x7f0700a2;
-    public static final int upload_remove=0x7f0700a3;
-    public static final int upload_upload=0x7f0700a4;
+    public static final int recipe_pause=0x7f07009d;
+    public static final int recipe_play=0x7f07009e;
+    public static final int step_add_blue=0x7f07009f;
+    public static final int step_remove_red=0x7f0700a0;
+    public static final int test_custom_background=0x7f0700a1;
+    public static final int tooltip_frame_dark=0x7f0700a2;
+    public static final int tooltip_frame_light=0x7f0700a3;
+    public static final int upload_add=0x7f0700a4;
+    public static final int upload_edit=0x7f0700a5;
+    public static final int upload_remove=0x7f0700a6;
+    public static final int upload_upload=0x7f0700a7;
   }
   public static final class id {
     public static final int ALT=0x7f080000;

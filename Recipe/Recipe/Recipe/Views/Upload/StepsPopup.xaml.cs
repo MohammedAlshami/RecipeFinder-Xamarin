@@ -68,7 +68,9 @@ namespace Recipe.Views
                     if (content is Grid grid1)
                     {
                         var label1 = (Label)grid1.Children[0];
-                        stepsList.Remove(label1.Text);
+                        string[] parts = label1.Text.Split(new char[] { ' ' }, 2);
+                        string resultString = parts[1];
+                        stepsList.Remove(resultString);
                         StepsListStackLayout.Children.Remove(frame_1);
                     }
                 };
